@@ -353,14 +353,18 @@ async def start_pm(client, message: Message, _):
                 yt_url = f"https://www.youtube.com/watch?v={vidid}"
                 downloaded = False
                 if dl_type == "v":
-                    proc = await asyncio.create_subprocess_exec(
-                        "yt-dlp",
+                    cmd_args = [
                         "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
                         "--merge-output-format", "mp4",
                         "--no-playlist",
-                        "--extractor-args", "youtube:player_client=android,ios",
-                        "-o", tmp_file,
-                        yt_url,
+                        "--extractor-args", "youtube:player_client=tv,mweb,android_embedded",
+                    ]
+                    if os.path.exists(os.path.join(os.getcwd(), "cookies.txt")):
+                        cmd_args.extend(["--cookies", os.path.join(os.getcwd(), "cookies.txt")])
+                    cmd_args.extend(["-o", tmp_file, yt_url])
+
+                    proc = await asyncio.create_subprocess_exec(
+                        "yt-dlp", *cmd_args,
                         stdout=asyncio.subprocess.DEVNULL,
                         stderr=asyncio.subprocess.DEVNULL,
                     )
@@ -372,14 +376,18 @@ async def start_pm(client, message: Message, _):
                             downloaded = True
                             break
                 else:
-                    proc = await asyncio.create_subprocess_exec(
-                        "yt-dlp",
+                    cmd_args = [
                         "-x", "--audio-format", "mp3",
                         "--audio-quality", "0",
                         "--no-playlist",
-                        "--extractor-args", "youtube:player_client=android,ios",
-                        "-o", tmp_file,
-                        yt_url,
+                        "--extractor-args", "youtube:player_client=tv,mweb,android_embedded",
+                    ]
+                    if os.path.exists(os.path.join(os.getcwd(), "cookies.txt")):
+                        cmd_args.extend(["--cookies", os.path.join(os.getcwd(), "cookies.txt")])
+                    cmd_args.extend(["-o", tmp_file, yt_url])
+
+                    proc = await asyncio.create_subprocess_exec(
+                        "yt-dlp", *cmd_args,
                         stdout=asyncio.subprocess.DEVNULL,
                         stderr=asyncio.subprocess.DEVNULL,
                     )
