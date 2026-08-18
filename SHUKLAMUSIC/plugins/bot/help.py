@@ -48,12 +48,19 @@ async def show_help_private_cb(client, CallbackQuery):
     _ = get_string(language)
     keyboard = help_pannel(_)
     await CallbackQuery.message.delete()
-    await client.send_photo(
-        chat_id=CallbackQuery.message.chat.id,
-        photo=random.choice(SHASHANK_IMG),
-        caption=_["help_1"].format(SUPPORT_CHAT),
-        reply_markup=keyboard,
-    )
+    try:
+        await client.send_photo(
+            chat_id=CallbackQuery.message.chat.id,
+            photo=random.choice(SHASHANK_IMG),
+            caption=_["help_1"].format(SUPPORT_CHAT),
+            reply_markup=keyboard,
+        )
+    except Exception:
+        await client.send_message(
+            chat_id=CallbackQuery.message.chat.id,
+            text=_["help_1"].format(SUPPORT_CHAT),
+            reply_markup=keyboard,
+        )
 
 
 @app.on_message(filters.command(["help"]) & filters.private & ~BANNED_USERS)
@@ -100,11 +107,17 @@ async def helper_private(
         language = await get_lang(update.chat.id)
         _ = get_string(language)
         keyboard = help_pannel(_)
-        await update.reply_photo(
-            random.choice(SHASHANK_IMG),
-            caption=_["help_1"].format(SUPPORT_CHAT),
-            reply_markup=keyboard,
-        )
+        try:
+            await update.reply_photo(
+                random.choice(SHASHANK_IMG),
+                caption=_["help_1"].format(SUPPORT_CHAT),
+                reply_markup=keyboard,
+            )
+        except Exception:
+            await update.reply_text(
+                text=_["help_1"].format(SUPPORT_CHAT),
+                reply_markup=keyboard,
+            )
 
 @app.on_message(filters.command(["help"]) & filters.group & ~BANNED_USERS)
 @LanguageStart
