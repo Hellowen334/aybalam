@@ -364,7 +364,7 @@ async def start_pm(client, message: Message, _):
                     cmd_args.extend(["-o", tmp_file, yt_url])
 
                     proc = await asyncio.create_subprocess_exec(
-                        "yt-dlp", *cmd_args,
+                        sys.executable, "-m", "yt_dlp", *cmd_args,
                         stdout=asyncio.subprocess.DEVNULL,
                         stderr=asyncio.subprocess.DEVNULL,
                     )
@@ -387,7 +387,7 @@ async def start_pm(client, message: Message, _):
                     cmd_args.extend(["-o", tmp_file, yt_url])
 
                     proc = await asyncio.create_subprocess_exec(
-                        "yt-dlp", *cmd_args,
+                        sys.executable, "-m", "yt_dlp", *cmd_args,
                         stdout=asyncio.subprocess.DEVNULL,
                         stderr=asyncio.subprocess.DEVNULL,
                     )

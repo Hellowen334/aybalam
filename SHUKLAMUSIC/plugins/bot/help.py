@@ -56,11 +56,14 @@ async def show_help_private_cb(client, CallbackQuery):
             reply_markup=keyboard,
         )
     except Exception:
-        await client.send_message(
-            chat_id=CallbackQuery.message.chat.id,
-            text=_["help_1"].format(SUPPORT_CHAT),
-            reply_markup=keyboard,
-        )
+        try:
+            await client.send_message(
+                chat_id=CallbackQuery.message.chat.id,
+                text=_["help_1"].format(SUPPORT_CHAT),
+                reply_markup=keyboard,
+            )
+        except Exception:
+            pass
 
 
 @app.on_message(filters.command(["help"]) & filters.private & ~BANNED_USERS)
