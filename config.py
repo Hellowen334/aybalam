@@ -1,6 +1,6 @@
 # -----------------------------------------------
-# 🔸 Aybalam Music Project
-# 🔹 Developed & Maintained by: Aybalam Music (https://t.me/aryaduyuru)
+# 🔸 Rose X Music Project
+# 🔹 Developed & Maintained by: Rose X Music (https://t.me/rosexupdates)
 # 📅 Copyright © 2022 – All Rights Reserved
 #
 # 📖 License:
@@ -9,7 +9,7 @@
 # Commercial use, redistribution, or removal of this notice is strictly prohibited
 # without prior written permission from the author.
 #
-# ❤️ Made with ❤️ for Aybalam Music Community
+# ❤️ Made with ❤️ for Rose X Music Community
 # -----------------------------------------------
 
 import re
@@ -37,8 +37,8 @@ API_HASH = getenv("API_HASH", "")
 BOT_TOKEN = getenv("BOT_TOKEN")
 
 # Bot and owner info
-OWNER_USERNAME = getenv("OWNER_USERNAME", "Owner")
-BOT_USERNAME = getenv("BOT_USERNAME", "Rose_X_Musicbot")
+OWNER_USERNAME = getenv("OWNER_USERNAME", "Emir Aydın")
+BOT_USERNAME = getenv("BOT_USERNAME", "aybalammusicbot")
 BOT_NAME = getenv("BOT_NAME", "AყႦαʅαɱ Mυʂιƈ")
 ASSUSERNAME = getenv("ASSUSERNAME", "")
 
@@ -115,26 +115,26 @@ LOG_GROUP_ID = clean_id(getenv("LOG_GROUP_ID", getenv("LOGGER_ID", "@aybalammusi
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", SUPPORT_CHAT)
 
 # Image URLs
-SHASHANK_IMG = getenv("SHASHANK_IMG", "https://telegra.ph/file/b4a3a6962f9157ad7fdb3.jpg").split(",") if "," in getenv("SHASHANK_IMG", "") else [getenv("SHASHANK_IMG", "https://telegra.ph/file/b4a3a6962f9157ad7fdb3.jpg")]
+SHASHANK_IMG = getenv("SHASHANK_IMG", "https://files.catbox.moe/395pae.jpg").split(",") if "," in getenv("SHASHANK_IMG", "") else [getenv("SHASHANK_IMG", "https://files.catbox.moe/395pae.jpg")]
 
 # Rotating start photos (used by start command and home callbacks)
-_ROSE_IMG = "https://telegra.ph/file/b4a3a6962f9157ad7fdb3.jpg"
+_ROSE_IMG = "https://files.catbox.moe/395pae.jpg"
 START_PICS = [_ROSE_IMG] * 11
 
 PING_VIDEO_URL = getenv("PING_VIDEO_URL", "https://files.catbox.moe/lltsdr.mp4")
 
-START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/b4a3a6962f9157ad7fdb3.jpg")
-PING_IMG_URL = getenv("PING_IMG_URL", "https://telegra.ph/file/b4a3a6962f9157ad7fdb3.jpg")
-PLAYLIST_IMG_URL = getenv("PLAYLIST_IMG_URL", "https://telegra.ph/file/b4a3a6962f9157ad7fdb3.jpg")
-STATS_IMG_URL = getenv("STATS_IMG_URL", "https://telegra.ph/file/b4a3a6962f9157ad7fdb3.jpg")
-TELEGRAM_AUDIO_URL = getenv("TELEGRAM_AUDIO_URL", "https://telegra.ph/file/b4a3a6962f9157ad7fdb3.jpg")
-TELEGRAM_VIDEO_URL = getenv("TELEGRAM_VIDEO_URL", "https://telegra.ph/file/b4a3a6962f9157ad7fdb3.jpg")
-STREAM_IMG_URL = getenv("STREAM_IMG_URL", "https://telegra.ph/file/b4a3a6962f9157ad7fdb3.jpg")
-SOUNCLOUD_IMG_URL = getenv("SOUNCLOUD_IMG_URL", "https://telegra.ph/file/b4a3a6962f9157ad7fdb3.jpg")
-YOUTUBE_IMG_URL = getenv("YOUTUBE_IMG_URL", "https://telegra.ph/file/b4a3a6962f9157ad7fdb3.jpg")
-SPOTIFY_ARTIST_IMG_URL = getenv("SPOTIFY_ARTIST_IMG_URL", "https://telegra.ph/file/b4a3a6962f9157ad7fdb3.jpg")
-SPOTIFY_ALBUM_IMG_URL = getenv("SPOTIFY_ALBUM_IMG_URL", "https://telegra.ph/file/b4a3a6962f9157ad7fdb3.jpg")
-SPOTIFY_PLAYLIST_IMG_URL = getenv("SPOTIFY_PLAYLIST_IMG_URL", "https://telegra.ph/file/b4a3a6962f9157ad7fdb3.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://files.catbox.moe/395pae.jpg")
+PING_IMG_URL = getenv("PING_IMG_URL", "https://files.catbox.moe/395pae.jpg")
+PLAYLIST_IMG_URL = getenv("PLAYLIST_IMG_URL", "https://files.catbox.moe/395pae.jpg")
+STATS_IMG_URL = getenv("STATS_IMG_URL", "https://files.catbox.moe/395pae.jpg")
+TELEGRAM_AUDIO_URL = getenv("TELEGRAM_AUDIO_URL", "https://files.catbox.moe/395pae.jpg")
+TELEGRAM_VIDEO_URL = getenv("TELEGRAM_VIDEO_URL", "https://files.catbox.moe/395pae.jpg")
+STREAM_IMG_URL = getenv("STREAM_IMG_URL", "https://files.catbox.moe/395pae.jpg")
+SOUNCLOUD_IMG_URL = getenv("SOUNCLOUD_IMG_URL", "https://files.catbox.moe/395pae.jpg")
+YOUTUBE_IMG_URL = getenv("YOUTUBE_IMG_URL", "https://files.catbox.moe/395pae.jpg")
+SPOTIFY_ARTIST_IMG_URL = getenv("SPOTIFY_ARTIST_IMG_URL", "https://files.catbox.moe/395pae.jpg")
+SPOTIFY_ALBUM_IMG_URL = getenv("SPOTIFY_ALBUM_IMG_URL", "https://files.catbox.moe/395pae.jpg")
+SPOTIFY_PLAYLIST_IMG_URL = getenv("SPOTIFY_PLAYLIST_IMG_URL", "https://files.catbox.moe/395pae.jpg")
 
 
 # Helper function
