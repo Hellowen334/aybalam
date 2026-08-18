@@ -1,0 +1,24 @@
+[Unit]
+Description=AყႦαʅαɱ Mυʂιƈ Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+# Change the User to your system username (e.g. ubuntu, root, etc.)
+User=ubuntu
+
+# Set the WorkingDirectory to the absolute path of your bot directory on the VPS
+WorkingDirectory=/home/ubuntu/music
+
+# Set ExecStart to run python run.py inside your virtual environment
+ExecStart=/home/ubuntu/music/venv/bin/python run.py
+
+# Auto-restart the bot on crash or reboot
+Restart=always
+RestartSec=5
+
+# Optional: Load environment variables directly from .env file
+# EnvironmentFile=/home/ubuntu/music/.env
+
+[Install]
+WantedBy=multi-user.target
