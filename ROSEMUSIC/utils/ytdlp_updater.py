@@ -21,7 +21,7 @@ async def update_ytdlp():
             LOGGER("yt-dlp").info("yt-dlp updated successfully.")
             # Verify and log version
             ver_proc = await asyncio.create_subprocess_exec(
-                "yt-dlp", "--version",
+                sys.executable, "-m", "yt_dlp", "--version",
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.PIPE
             )
