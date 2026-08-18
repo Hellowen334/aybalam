@@ -30,7 +30,7 @@ _E_BELL    = 4956290155326473271   # 🔔
 
 
 def _clean_username(username: str) -> str:
-    return username.lstrip("@")
+    return username.lstrip("@").replace(" ", "")
 
 
 def start_panel(_):
