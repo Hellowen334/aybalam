@@ -101,14 +101,14 @@ def help_pannel_page2(_, START: Union[bool, int] = None):
             InlineKeyboardButton(text=_["H_B_15"], callback_data="help_callback hb15", style=ButtonStyle.SUCCESS,   icon_custom_emoji_id=_E_CAR),
         ],
         [
-            InlineKeyboardButton(text="🤕 ᴄʜᴀᴛғɪɢʜᴛ",   callback_data="help_callback hb16", style=ButtonStyle.PRIMARY,   icon_custom_emoji_id=_E_FIGHT),
-            InlineKeyboardButton(text="🫡 ɢɪᴛʜᴜʙ",        callback_data="help_callback hb17", style=ButtonStyle.SUCCESS,   icon_custom_emoji_id=_E_GITHUB),
-            InlineKeyboardButton(text="🫠 ᴄʜᴀᴛʙᴏᴛ",       callback_data="help_callback hb18", style=ButtonStyle.DANGER,    icon_custom_emoji_id=_E_CHATBOT),
+            InlineKeyboardButton(text=_["H_B_16"],   callback_data="help_callback hb16", style=ButtonStyle.PRIMARY,   icon_custom_emoji_id=_E_FIGHT),
+            InlineKeyboardButton(text=_["H_B_17"],        callback_data="help_callback hb17", style=ButtonStyle.SUCCESS,   icon_custom_emoji_id=_E_GITHUB),
+            InlineKeyboardButton(text=_["H_B_18"],       callback_data="help_callback hb18", style=ButtonStyle.DANGER,    icon_custom_emoji_id=_E_CHATBOT),
         ],
         [
-            InlineKeyboardButton(text="🦁 ɢᴀᴍᴇs",         callback_data="help_callback hb19", style=ButtonStyle.SUCCESS,   icon_custom_emoji_id=_E_GAMES),
-            InlineKeyboardButton(text="❤️‍🩹 sᴛʀɪɴɢ ɢᴇɴ",  callback_data="help_callback hb20", style=ButtonStyle.DANGER,    icon_custom_emoji_id=_E_KEY),
-            InlineKeyboardButton(text="✨ ǫᴜɪᴄᴋ ɢᴀᴍᴇs",   callback_data="help_callback hb21", style=ButtonStyle.PRIMARY,   icon_custom_emoji_id=_E_GAMES),
+            InlineKeyboardButton(text=_["H_B_19"],         callback_data="help_callback hb19", style=ButtonStyle.SUCCESS,   icon_custom_emoji_id=_E_GAMES),
+            InlineKeyboardButton(text=_["H_B_20"],  callback_data="help_callback hb20", style=ButtonStyle.DANGER,    icon_custom_emoji_id=_E_KEY),
+            InlineKeyboardButton(text=_["H_B_21"],   callback_data="help_callback hb21", style=ButtonStyle.PRIMARY,   icon_custom_emoji_id=_E_GAMES),
         ],
         _nav_row(_, "help_page_1", "settingsback_helper" if START else "close", "help_page_3", bool(START)),
     ])
@@ -118,22 +118,22 @@ def help_pannel_page2(_, START: Union[bool, int] = None):
 def help_pannel_page3(_, START: Union[bool, int] = None):
     return InlineKeyboardMarkup([
         [
-            InlineKeyboardButton(text="⚔️ ʙᴀɴs",          callback_data="help_callback hb22", style=ButtonStyle.DANGER,    icon_custom_emoji_id=_E_SWORD),
-            InlineKeyboardButton(text="📌 ᴛᴀɢs",           callback_data="help_callback hb23", style=ButtonStyle.SUCCESS,   icon_custom_emoji_id=_E_PIN),
-            InlineKeyboardButton(text="👋 ᴡᴇʟᴄᴏᴍᴇ",       callback_data="help_callback hb24", style=ButtonStyle.PRIMARY,   icon_custom_emoji_id=_E_WAVE),
+            InlineKeyboardButton(text=_["H_B_22"],          callback_data="help_callback hb22", style=ButtonStyle.DANGER,    icon_custom_emoji_id=_E_SWORD),
+            InlineKeyboardButton(text=_["H_B_23"],           callback_data="help_callback hb23", style=ButtonStyle.SUCCESS,   icon_custom_emoji_id=_E_PIN),
+            InlineKeyboardButton(text=_["H_B_24"],       callback_data="help_callback hb24", style=ButtonStyle.PRIMARY,   icon_custom_emoji_id=_E_WAVE),
         ],
         [
-            InlineKeyboardButton(text="💑 ᴄᴏᴜᴘʟᴇ",        callback_data="help_callback hb25", style=ButtonStyle.DANGER,    icon_custom_emoji_id=_E_HEART),
-            InlineKeyboardButton(text="ℹ️ ᴜsᴇʀ ɪɴғᴏ",     callback_data="help_callback hb26", style=ButtonStyle.PRIMARY,   icon_custom_emoji_id=_E_INFO),
-            InlineKeyboardButton(text="⚡ ᴛʀᴜᴛʜ-ᴅᴀʀᴇ",    callback_data="help_callback hb27", style=ButtonStyle.SUCCESS,   icon_custom_emoji_id=_E_TRUTH),
+            InlineKeyboardButton(text=_["H_B_25"],        callback_data="help_callback hb25", style=ButtonStyle.DANGER,    icon_custom_emoji_id=_E_HEART),
+            InlineKeyboardButton(text=_["H_B_26"],     callback_data="help_callback hb26", style=ButtonStyle.PRIMARY,   icon_custom_emoji_id=_E_INFO),
+            InlineKeyboardButton(text=_["H_B_27"],    callback_data="help_callback hb27", style=ButtonStyle.SUCCESS,   icon_custom_emoji_id=_E_TRUTH),
         ],
         [
-            InlineKeyboardButton(text="📋 ɴᴏᴛᴇs",          callback_data="help_callback hb28", style=ButtonStyle.PRIMARY,   icon_custom_emoji_id=_E_NOTES),
-            InlineKeyboardButton(text="💤 ᴀғᴋ",            callback_data="help_callback hb29", style=ButtonStyle.DANGER,    icon_custom_emoji_id=_E_AFK),
-            InlineKeyboardButton(text="💰 ᴄʀʏᴘᴛᴏ & ᴜᴘɪ",  callback_data="help_callback hb30", style=ButtonStyle.SUCCESS,   icon_custom_emoji_id=_E_CRYPTO),
+            InlineKeyboardButton(text=_["H_B_28"],          callback_data="help_callback hb28", style=ButtonStyle.PRIMARY,   icon_custom_emoji_id=_E_NOTES),
+            InlineKeyboardButton(text=_["H_B_29"],            callback_data="help_callback hb29", style=ButtonStyle.DANGER,    icon_custom_emoji_id=_E_AFK),
+            InlineKeyboardButton(text=_["H_B_30"],  callback_data="help_callback hb30", style=ButtonStyle.SUCCESS,   icon_custom_emoji_id=_E_CRYPTO),
         ],
         [
-            InlineKeyboardButton(text="🔊 ᴠᴄ ʟᴏɢs",       callback_data="help_callback hb31", style=ButtonStyle.PRIMARY,   icon_custom_emoji_id=_E_VC),
+            InlineKeyboardButton(text=_["H_B_31"],       callback_data="help_callback hb31", style=ButtonStyle.PRIMARY,   icon_custom_emoji_id=_E_VC),
         ],
         _nav_row(_, "help_page_2", "settingsback_helper" if START else "close", "help_page_4", bool(START)),
     ])

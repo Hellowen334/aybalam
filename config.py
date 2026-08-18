@@ -115,26 +115,26 @@ LOG_GROUP_ID = clean_id(getenv("LOG_GROUP_ID", getenv("LOGGER_ID", "@aybalammusi
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", SUPPORT_CHAT)
 
 # Image URLs
-SHASHANK_IMG = getenv("SHASHANK_IMG", "https://files.catbox.moe/395pae.jpg").split(",") if "," in getenv("SHASHANK_IMG", "") else [getenv("SHASHANK_IMG", "https://files.catbox.moe/395pae.jpg")]
+SHASHANK_IMG = getenv("SHASHANK_IMG", "https://telegra.ph/file/b60de313f86f3511e0e1b.jpg").split(",") if "," in getenv("SHASHANK_IMG", "") else [getenv("SHASHANK_IMG", "https://telegra.ph/file/b60de313f86f3511e0e1b.jpg")]
 
 # Rotating start photos (used by start command and home callbacks)
-_ROSE_IMG = "https://files.catbox.moe/395pae.jpg"
+_ROSE_IMG = "https://telegra.ph/file/b60de313f86f3511e0e1b.jpg"
 START_PICS = [_ROSE_IMG] * 11
 
-PING_VIDEO_URL = getenv("PING_VIDEO_URL", "https://files.catbox.moe/lltsdr.mp4")
+PING_VIDEO_URL = getenv("PING_VIDEO_URL", "https://telegra.ph/file/b60de313f86f3511e0e1b.jpg")
 
-START_IMG_URL = getenv("START_IMG_URL", "https://files.catbox.moe/395pae.jpg")
-PING_IMG_URL = getenv("PING_IMG_URL", "https://files.catbox.moe/395pae.jpg")
-PLAYLIST_IMG_URL = getenv("PLAYLIST_IMG_URL", "https://files.catbox.moe/395pae.jpg")
-STATS_IMG_URL = getenv("STATS_IMG_URL", "https://files.catbox.moe/395pae.jpg")
-TELEGRAM_AUDIO_URL = getenv("TELEGRAM_AUDIO_URL", "https://files.catbox.moe/395pae.jpg")
-TELEGRAM_VIDEO_URL = getenv("TELEGRAM_VIDEO_URL", "https://files.catbox.moe/395pae.jpg")
-STREAM_IMG_URL = getenv("STREAM_IMG_URL", "https://files.catbox.moe/395pae.jpg")
-SOUNCLOUD_IMG_URL = getenv("SOUNCLOUD_IMG_URL", "https://files.catbox.moe/395pae.jpg")
-YOUTUBE_IMG_URL = getenv("YOUTUBE_IMG_URL", "https://files.catbox.moe/395pae.jpg")
-SPOTIFY_ARTIST_IMG_URL = getenv("SPOTIFY_ARTIST_IMG_URL", "https://files.catbox.moe/395pae.jpg")
-SPOTIFY_ALBUM_IMG_URL = getenv("SPOTIFY_ALBUM_IMG_URL", "https://files.catbox.moe/395pae.jpg")
-SPOTIFY_PLAYLIST_IMG_URL = getenv("SPOTIFY_PLAYLIST_IMG_URL", "https://files.catbox.moe/395pae.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/b60de313f86f3511e0e1b.jpg")
+PING_IMG_URL = getenv("PING_IMG_URL", "https://telegra.ph/file/b60de313f86f3511e0e1b.jpg")
+PLAYLIST_IMG_URL = getenv("PLAYLIST_IMG_URL", "https://telegra.ph/file/b60de313f86f3511e0e1b.jpg")
+STATS_IMG_URL = getenv("STATS_IMG_URL", "https://telegra.ph/file/b60de313f86f3511e0e1b.jpg")
+TELEGRAM_AUDIO_URL = getenv("TELEGRAM_AUDIO_URL", "https://telegra.ph/file/b60de313f86f3511e0e1b.jpg")
+TELEGRAM_VIDEO_URL = getenv("TELEGRAM_VIDEO_URL", "https://telegra.ph/file/b60de313f86f3511e0e1b.jpg")
+STREAM_IMG_URL = getenv("STREAM_IMG_URL", "https://telegra.ph/file/b60de313f86f3511e0e1b.jpg")
+SOUNCLOUD_IMG_URL = getenv("SOUNCLOUD_IMG_URL", "https://telegra.ph/file/b60de313f86f3511e0e1b.jpg")
+YOUTUBE_IMG_URL = getenv("YOUTUBE_IMG_URL", "https://telegra.ph/file/b60de313f86f3511e0e1b.jpg")
+SPOTIFY_ARTIST_IMG_URL = getenv("SPOTIFY_ARTIST_IMG_URL", "https://telegra.ph/file/b60de313f86f3511e0e1b.jpg")
+SPOTIFY_ALBUM_IMG_URL = getenv("SPOTIFY_ALBUM_IMG_URL", "https://telegra.ph/file/b60de313f86f3511e0e1b.jpg")
+SPOTIFY_PLAYLIST_IMG_URL = getenv("SPOTIFY_PLAYLIST_IMG_URL", "https://telegra.ph/file/b60de313f86f3511e0e1b.jpg")
 
 
 # Helper function

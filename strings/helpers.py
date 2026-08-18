@@ -1,426 +1,301 @@
-HELP_1 = """<b><u>ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs :</u></b>
+HELP_1 = """<b><u>ʏöɴᴇᴛɪᴄɪ ᴋᴏᴍᴜᴛʟᴀʀı :</u></b>
 
-ᴊᴜsᴛ ᴀᴅᴅ <b>ᴄ</b> ᴀᴛ ᴛʜᴇ ʙᴇɢɪɴɴɪɴɢ ᴏғ ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ᴜsᴇ ᴛʜᴇᴍ ғᴏʀ ᴄʜᴀɴɴᴇʟs.
+Kanalda kullanmak için komutların başına <b>c</b> ekleyin.
 
-• /pause : ᴘᴀᴜsᴇs ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴘʟᴀʏɪɴɢ sᴛʀᴇᴀᴍ.  
-• /resume : ʀᴇsᴜᴍᴇs ᴛʜᴇ ᴘᴀᴜsᴇᴅ sᴛʀᴇᴀᴍ.  
-• /skip : sᴋɪᴘs ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴛʀᴀᴄᴋ ᴀɴᴅ sᴛᴀʀᴛs ᴛʜᴇ ɴᴇxᴛ ᴏɴᴇ.  
-• /end ᴏʀ /stop : ᴄʟᴇᴀʀs ᴛʜᴇ ǫᴜᴇᴜᴇ ᴀɴᴅ sᴛᴏᴘs ᴛʜᴇ sᴛʀᴇᴀᴍ.  
-• /player : ᴏᴘᴇɴs ᴀɴ ɪɴᴛᴇʀᴀᴄᴛɪᴠᴇ ᴘʟᴀʏᴇʀ ᴘᴀɴᴇʟ.  
-• /queue : sʜᴏᴡs ᴛʜᴇ ǫᴜᴇᴜᴇᴅ ᴛʀᴀᴄᴋs.
+• /pause : Çalan müziği duraklatır.  
+• /resume : Duraklatılan müziği devam ettirir.  
+• /skip : Mevcut şarkıyı atlar ve sıradakini çalar.  
+• /end ᴠᴇʏᴀ /stop : Sırayı temizler ve müziği durdurur.  
+• /player : Etkileşimli oynatıcı panelini açar.  
+• /queue : Sıradaki şarkıları gösterir.
 """
 
-HELP_2 = """<b><u>ᴀᴜᴛʜ ᴜsᴇʀs :</u></b>
+HELP_2 = """<b><u>ʏᴇᴛᴋɪʟɪ ᴋᴜʟʟᴀɴıᴄıʟᴀʀ :</u></b>
 
-ᴀᴜᴛʜ ᴜsᴇʀs ᴄᴀɴ ᴜsᴇ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs ᴡɪᴛʜᴏᴜᴛ ʜᴀᴠɪɴɢ ᴀᴅᴍɪɴ ʀɪɢʜᴛs ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
+Yetkili kullanıcılar, grupta yönetici olmasalar bile yönetici komutlarını kullanabilirler.
 
-• /auth [ᴜsᴇʀɴᴀᴍᴇ/ɪᴅ] : ᴀᴅᴅs ᴀ ᴜsᴇʀ ᴛᴏ ᴛʜᴇ ᴀᴜᴛʜ ʟɪsᴛ.  
-• /unauth [ᴜsᴇʀɴᴀᴍᴇ/ɪᴅ] : ʀᴇᴍᴏᴠᴇs ᴀ ᴜsᴇʀ ғʀᴏᴍ ᴛʜᴇ ᴀᴜᴛʜ ʟɪsᴛ.  
-• /authusers : sʜᴏᴡs ᴛʜᴇ ʟɪsᴛ ᴏғ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴜsᴇʀs.
+• /auth [ᴋᴜʟʟᴀɴıᴄı ᴀᴅı/ɪᴅ] : Bir kullanıcıyı yetkili listesine ekler.  
+• /unauth [ᴋᴜʟʟᴀɴıᴄı ᴀᴅı/ɪᴅ] : Bir kullanıcıyı yetkili listesinden çıkarır.  
+• /authusers : Yetkili kullanıcıların listesini gösterir.
 """
 
-HELP_3 = """<b><u>ʙʀᴏᴀᴅᴄᴀsᴛ ғᴇᴀᴛᴜʀᴇ :</u></b> [sᴜᴅᴏ ᴏɴʟʏ]
+HELP_3 = """<b><u>ᴅᴜʏᴜʀᴜ (ʙʀᴏᴀᴅᴄᴀsᴛ) :</u></b> [Sadece Sudo]
 
-• /broadcast [ᴍᴇssᴀɢᴇ/ʀᴇᴩʟʏ] : sᴇɴᴅs ᴀ ʙʀᴏᴀᴅᴄᴀsᴛ ᴛᴏ ᴀʟʟ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs.
+• /broadcast [ᴍᴇsᴀᴊ/ʏᴀɴıᴛ] : Hizmet verilen tüm sohbetlere duyuru gönderir.
 
-<b>ᴍᴏᴅᴇs :</b>  
-- <b>-pin</b> : ᴘɪɴs ᴛʜᴇ ᴍᴇssᴀɢᴇ.  
-- <b>-pinloud</b> : ᴘɪɴs ᴀɴᴅ sᴇɴᴅs ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ.  
-- <b>-user</b> : sᴇɴᴅs ᴛᴏ ᴜsᴇʀs ᴡʜᴏ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ.  
-- <b>-assistant</b> : sᴇɴᴅs ғʀᴏᴍ ᴛʜᴇ ᴀssɪsᴛᴀɴᴛ ᴀᴄᴄᴏᴜɴᴛ.  
-- <b>-nobot</b> : ᴅɪsᴀʙʟᴇs ʙᴏᴛ sᴇɴᴅɪɴɢ.
+<b>ᴍᴏᴅʟᴀʀ :</b>  
+- <b>-pin</b> : Mesajı sabitler.  
+- <b>-pinloud</b> : Mesajı sabitler ve bildirim gönderir.  
+- <b>-user</b> : Botu başlatan kullanıcılara gönderir.  
+- <b>-assistant</b> : Asistan hesabı üzerinden gönderir.  
+- <b>-nobot</b> : Bot üzerinden gönderimi kapatır.
 
-<b>ᴇxᴀᴍᴩʟᴇ :</b>  
-<code>/broadcast -user -assistant -pin ᴛᴇsᴛɪɴɢ ʙʀᴏᴀᴅᴄᴀsᴛ</code>
+<b>öʀɴᴇᴋ :</b>  
+<code>/broadcast -user -assistant -pin ᴛᴇsᴛ ᴅᴜʏᴜʀᴜsᴜ</code>
 """
 
-HELP_4 = """<b><u>ᴄʜᴀᴛ ʙʟᴀᴄᴋʟɪsᴛ :</u></b> [sᴜᴅᴏ ᴏɴʟʏ]
+HELP_4 = """<b><u>sᴏʜʙᴇᴛ ᴋᴀʀᴀ ʟɪsᴛᴇsɪ :</u></b> [Sadece Sudo]
 
-ʀᴇsᴛʀɪᴄᴛ ᴀʙᴜsɪᴠᴇ ᴏʀ sᴘᴀᴍᴍʏ ᴄʜᴀᴛs ғʀᴏᴍ ᴜsɪɴɢ ᴛʜᴇ ʙᴏᴛ.
+Kötüye kullanan sohbetlerin botu kullanmasını kısıtlar.
 
-• /blacklistchat [ɪᴅ] : ʙʟᴀᴄᴋʟɪsᴛs ᴀ ᴄʜᴀᴛ.  
-• /whitelistchat [ɪᴅ] : ʀᴇᴍᴏᴠᴇs ᴀ ᴄʜᴀᴛ ғʀᴏᴍ ʙʟᴀᴄᴋʟɪsᴛ.  
-• /blacklistedchat : sʜᴏᴡs ᴀʟʟ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴄʜᴀᴛs.
+• /blacklistchat [ɪᴅ] : Bir sohbeti kara listeye alır.  
+• /whitelistchat [ɪᴅ] : Bir sohbeti kara listeden çıkarır.  
+• /blacklistedchat : Kara listeye alınan tüm sohbetleri gösterir.
 """
 
-HELP_5 = """<b><u>ʙʟᴏᴄᴋ ᴜsᴇʀs :</u></b> [sᴜᴅᴏ ᴏɴʟʏ]
+HELP_5 = """<b><u>ᴋᴜʟʟᴀɴıᴄı ᴇɴɢᴇʟʟᴇᴍᴇ :</u></b> [Sadece Sudo]
 
-ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs ᴄᴀɴ’ᴛ ᴜsᴇ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs.
+Engellenen kullanıcılar bot komutlarını kullanamaz.
 
-• /block [ᴜsᴇʀ/ʀᴇᴩʟʏ] : ʙʟᴏᴄᴋs ᴀ ᴜsᴇʀ.  
-• /unblock [ᴜsᴇʀ/ʀᴇᴩʟʏ] : ᴜɴʙʟᴏᴄᴋs ᴀ ᴜsᴇʀ.  
-• /blockedusers : sʜᴏᴡs ᴀʟʟ ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs.
+• /block [ᴋᴜʟʟᴀɴıᴄı/ʏᴀɴıᴛ] : Bir kullanıcıyı engeller.  
+• /unblock [ᴋᴜʟʟᴀɴıᴄı/ʏᴀɴıᴛ] : Bir kullanıcının engelini kaldırır.  
+• /blockedusers : Engellenen tüm kullanıcıları gösterir.
 """
 
-HELP_6 = """<b><u>ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ :</u></b>
+HELP_6 = """<b><u>ᴋᴀɴᴀʟᴅᴀ ᴏʏɴᴀᴛᴍᴀ :</u></b>
 
-sᴛʀᴇᴀᴍ ᴀᴜᴅɪᴏ/ᴠɪᴅᴇᴏ ɪɴ ᴀ ᴄʜᴀɴɴᴇʟ.
+Kanalda ses/video yayını yapın.
 
-• /cplay : sᴛᴀʀᴛ ᴀᴜᴅɪᴏ sᴛʀᴇᴀᴍɪɴɢ.  
-• /cvplay : sᴛᴀʀᴛ ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍɪɴɢ.  
-• /cplayforce or /cvplayforce : ғᴏʀᴄᴇs ᴀ ɴᴇᴡ sᴛʀᴇᴀᴍ.  
-• /channelplay [ᴜsᴇʀɴᴀᴍᴇ/ɪᴅ] ᴏʀ [disable] : ʟɪɴᴋs ᴀ ᴄʜᴀɴɴᴇʟ ᴡɪᴛʜ ᴀ ɢʀᴏᴜᴩ.
+• /cplay : Ses yayınını başlatır.  
+• /cvplay : Video yayınını başlatır.  
+• /cplayforce ᴠᴇʏᴀ /cvplayforce : Yeni bir yayını zorla başlatır.  
+• /channelplay [ᴋᴜʟʟᴀɴıᴄı ᴀᴅı/ɪᴅ] ᴠᴇʏᴀ [disable] : Bir kanalı gruba bağlar.
 """
 
-HELP_7 = """<b><u>ɢʟᴏʙᴀʟ ʙᴀɴ :</u></b> [sᴜᴅᴏ ᴏɴʟʏ]
+HELP_7 = """<b><u>ɢʟᴏʙᴀʟ ʏᴀsᴀᴋ (ɢʙᴀɴ) :</u></b> [Sadece Sudo]
 
-• /gban [ᴜsᴇʀ/ʀᴇᴩʟʏ] : ɢʟᴏʙᴀʟʟʏ ʙᴀɴs ᴀ ᴜsᴇʀ.  
-• /ungban [ᴜsᴇʀ/ʀᴇᴩʟʏ] : ᴜɴʙᴀɴs ᴀ ɢʟᴏʙᴀʟʟʏ ʙᴀɴɴᴇᴅ ᴜsᴇʀ.  
-• /gbannedusers : sʜᴏᴡs ᴛʜᴇ ʟɪsᴛ ᴏғ ɢʟᴏʙᴀʟʟʏ ʙᴀɴɴᴇᴅ ᴜsᴇʀs.
+• /gban [ᴋᴜʟʟᴀɴıᴄı/ʏᴀɴıᴛ] : Bir kullanıcıyı botun bulunduğu tüm gruplardan yasaklar.  
+• /ungban [ᴋᴜʟʟᴀɴıᴄı/ʏᴀɴıᴛ] : Küresel yasağı kaldırır.  
+• /gbannedusers : Küresel yasaklı kullanıcıları gösterir.
 """
 
-HELP_8 = """<b><u>ʟᴏᴏᴘ sᴛʀᴇᴀᴍ :</u></b>
+HELP_8 = """<b><u>ᴅöɴɢü (ʟᴏᴏᴘ) :</u></b>
 
-ʀᴇᴘᴇᴀᴛ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ sᴛʀᴇᴀᴍ.
+Mevcut şarkıyı tekrarlar.
 
-• /loop [enable/disable] : ᴇɴᴀʙʟᴇs ᴏʀ ᴅɪsᴀʙʟᴇs ʟᴏᴏᴘ.  
-• /loop [1–10] : sᴇᴛs ʟᴏᴏᴘ ᴄᴏᴜɴᴛ.
+• /loop [enable/disable] : Döngüyü açar veya kapatır.  
+• /loop [1–10] : Döngü sayısını ayarlar.
 """
 
-HELP_9 = """<b><u>ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ :</u></b> [sᴜᴅᴏ ᴏɴʟʏ]
+HELP_9 = """<b><u>ʙᴀᴋıᴍ (ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ) :</u></b> [Sadece Sudo]
 
-• /logs : ɢᴇᴛs ʙᴏᴛ ʟᴏɢs.  
-• /logger [enable/disable] : ᴛᴏɢɢʟᴇs ᴀᴄᴛɪᴠɪᴛʏ ʟᴏɢɢɪɴɢ.  
-• /maintenance [enable/disable] : ᴇɴᴀʙʟᴇs ᴏʀ ᴅɪsᴀʙʟᴇs ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ᴍᴏᴅᴇ.
+• /logs : Bot kayıtlarını (log) alır.  
+• /logger [enable/disable] : Etkinlik kaydını açar veya kapatır.  
+• /maintenance [enable/disable] : Bakım modunu açar veya kapatır.
 """
 
-HELP_10 = """<b><u>ᴘɪɴɢ & sᴛᴀᴛs :</u></b>
+HELP_10 = """<b><u>ᴘɪɴɢ ᴠᴇ ɪsᴛᴀᴛɪsᴛɪᴋʟᴇʀ :</u></b>
 
-• /start : sᴛᴀʀᴛs ᴛʜᴇ ʙᴏᴛ.  
-• /help : sʜᴏᴡs ᴛʜᴇ ʜᴇʟᴩ ᴍᴇɴᴜ.  
-• /ping : sʜᴏᴡs ʙᴏᴛ ʟᴀᴛᴇɴᴄʏ ᴀɴᴅ sʏsᴛᴇᴍ sᴛᴀᴛs.  
-• /stats : sʜᴏᴡs ᴏᴠᴇʀᴀʟʟ ʙᴏᴛ sᴛᴀᴛɪsᴛɪᴄs.
+• /start : Botu başlatır.  
+• /help : Yardım menüsünü gösterir.  
+• /ping : Botun gecikme süresini ve sistem istatistiklerini gösterir.  
+• /stats : Genel bot istatistiklerini gösterir.
 """
 
-HELP_11 = """<b><u>ᴩʟᴀʏ ᴄᴏᴍᴍᴀɴᴅs :</u></b>
+HELP_11 = """<b><u>ᴏʏɴᴀᴛᴍᴀ ᴋᴏᴍᴜᴛʟᴀʀı :</u></b>
 
-<b>v :</b> ᴠɪᴅᴇᴏ ᴘʟᴀʏ  
-<b>force :</b> ғᴏʀᴄᴇ ᴘʟᴀʏ  
+<b>v :</b> Video oynatır.  
+<b>force :</b> Zorla oynatır (sırayı atlar).  
 
-• /play or /vplay : sᴛᴀʀᴛs ᴀᴜᴅɪᴏ/ᴠɪᴅᴇᴏ sᴛʀᴇᴀᴍɪɴɢ.  
-• /playforce or /vplayforce : ғᴏʀᴄᴇs ᴀ ɴᴇᴡ sᴛʀᴇᴀᴍ.
+• /play ᴠᴇʏᴀ /vplay : Ses/video yayınını başlatır.  
+• /playforce ᴠᴇʏᴀ /vplayforce : Yeni bir yayını zorla başlatır.
 """
 
-HELP_12 = """<b><u>sʜᴜғғʟᴇ ǫᴜᴇᴜᴇ :</u></b>
+HELP_12 = """<b><u>sıʀᴀʏı ᴋᴀʀışᴛıʀ (sʜᴜғғʟᴇ) :</u></b>
 
-• /shuffle : sʜᴜғғʟᴇs ᴛʜᴇ ǫᴜᴇᴜᴇ.  
-• /queue : sʜᴏᴡs ᴛʜᴇ sʜᴜғғʟᴇᴅ ǫᴜᴇᴜᴇ.
+• /shuffle : Sıradaki şarkıları karıştırır.  
+• /queue : Karıştırılmış sırayı gösterir.
 """
 
-HELP_13 = """<b><u>sᴇᴇᴋ sᴛʀᴇᴀᴍ :</u></b>
+HELP_13 = """<b><u>sᴀʀᴅıʀᴍᴀ (sᴇᴇᴋ) :</u></b>
 
-• /seek [sᴇᴄᴏɴᴅs] : ɢᴏᴇs ғᴏʀᴡᴀʀᴅ ɪɴ ᴛʜᴇ sᴛʀᴇᴀᴍ.  
-• /seekback [sᴇᴄᴏɴᴅs] : sᴇᴇᴋs ʙᴀᴄᴋᴡᴀʀᴅ.
+• /seek [sᴀɴɪʏᴇ] : Şarkıyı ileri sarar.  
+• /seekback [sᴀɴɪʏᴇ] : Şarkıyı geri sarar.
 """
 
-HELP_14 = """<b><u>sᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅ :</u></b>
+HELP_14 = """<b><u>şᴀʀᴋı ɪɴᴅɪʀᴍᴇ :</u></b>
 
-• /song [ɴᴀᴍᴇ/ʏᴛ ᴜʀʟ] : ᴅᴏᴡɴʟᴏᴀᴅs ᴀ sᴏɴɢ ɪɴ ᴍᴘ3 ᴏʀ ᴍᴘ4 ғᴏʀᴍᴀᴛ.
+• /song [ᴀᴅ/ʏᴛ ʟɪɴᴋɪ] : Bir şarkıyı MP3 veya MP4 formatında indirir.
 """
 
-HELP_15 = """<b><u>sᴘᴇᴇᴅ ᴄᴏᴍᴍᴀɴᴅs :</u></b> [ᴀᴅᴍɪɴ ᴏɴʟʏ]
+HELP_15 = """<b><u>ʜıᴢ ᴋᴏᴍᴜᴛʟᴀʀı :</u></b> [Sadece Yönetici]
 
-ᴄᴏɴᴛʀᴏʟ ᴛʜᴇ ᴘʟᴀʏʙᴀᴄᴋ sᴘᴇᴇᴅ ᴏғ ᴛʜᴇ sᴛʀᴇᴀᴍ.
+Yayın oynatma hızını kontrol edin.
 
-• /speed or /playback : ᴀᴅᴊᴜsᴛs ᴀᴜᴅɪᴏ sᴘᴇᴇᴅ ɪɴ ɢʀᴏᴜᴩs.  
-• /cspeed or /cplayback : ᴀᴅᴊᴜsᴛs ᴀᴜᴅɪᴏ sᴘᴇᴇᴅ ɪɴ ᴄʜᴀɴɴᴇʟs.
+• /speed ᴠᴇʏᴀ /playback : Gruplarda ses hızını ayarlar.  
+• /cspeed ᴠᴇʏᴀ /cplayback : Kanallarda ses hızını ayarlar.
 """
 
-HELP_16 = """<b><u>ᴄʜᴀᴛғɪɢʜᴛ ɢᴀᴍᴇs :</u></b>
+HELP_16 = """<b><u>sᴏʜʙᴇᴛ ᴏʏᴜɴʟᴀʀı :</u></b>
 
-Fun word / emoji / flag guessing mini-games with a global leaderboard.
+Kelime, emoji ve bayrak tahmin etme oyunları.
 
-• /wordgame or /cfword : sᴛᴀʀᴛs ᴀ ᴡᴏʀᴅ ɢᴜᴇssɪɴɢ ɢᴀᴍᴇ.
-• /emojigame or /cfemoji : sᴛᴀʀᴛs ᴀɴ ᴇᴍᴏᴊɪ ɢᴜᴇssɪɴɢ ɢᴀᴍᴇ.
-• /flaggame or /cfflag : sᴛᴀʀᴛs ᴀ ғʟᴀɢ ɢᴜᴇssɪɴɢ ɢᴀᴍᴇ.
-• /wordleaderboard or /gametop or /cflb : sʜᴏᴡs ᴛʜᴇ ɢʟᴏʙᴀʟ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ.
-
-Games also start automatically after 5 minutes of chat inactivity to keep the group active.
+• /wordgame ᴠᴇʏᴀ /cfword : Kelime tahmin oyunu başlatır.
+• /emojigame ᴠᴇʏᴀ /cfemoji : Emoji tahmin oyunu başlatır.
+• /flaggame ᴠᴇʏᴀ /cfflag : Bayrak tahmin oyunu başlatır.
+• /wordleaderboard ᴠᴇʏᴀ /gametop ᴠᴇʏᴀ /cflb : Küresel liderlik tablosunu gösterir.
 """
 
-HELP_17 = """<b><u>ɢɪᴛʜᴜʙ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ :</u></b>
+HELP_17 = """<b><u>ɢɪᴛʜᴜʙ ʏöɴᴇᴛɪᴍɪ :</u></b>
 
-Convert repos to ZIP, push ZIPs to your repo, and manage your GitHub account — all from Telegram.
+GitHub repolarınızı yönetin.
 
-• /setghtoken [token] : sᴀᴠᴇs ʏᴏᴜʀ ɢɪᴛʜᴜʙ ᴛᴏᴋᴇɴ (ᴅᴍ ᴏɴʟʏ).
-• /mytoken : ᴄʜᴇᴄᴋs ɪғ ᴀ ᴛᴏᴋᴇɴ ɪs sᴀᴠᴇᴅ.
-• /removetoken : ʀᴇᴍᴏᴠᴇs ʏᴏᴜʀ sᴀᴠᴇᴅ ᴛᴏᴋᴇɴ.
-• /repo2zip [owner/repo] [branch] : ᴅᴏᴡɴʟᴏᴀᴅs ᴀɴʏ ᴘᴜʙʟɪᴄ ʀᴇᴘᴏ ᴀs ᴀ ᴢɪᴘ.
-• /pushzip [owner/repo] [branch] : (ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴢɪᴘ) ᴘᴜsʜᴇs ɪᴛs ᴄᴏɴᴛᴇɴᴛs ᴛᴏ ʏᴏᴜʀ ʀᴇᴘᴏ.
-• /myrepos : ʟɪsᴛs ʏᴏᴜʀ ʀᴇᴘᴏsɪᴛᴏʀɪᴇs.
-• /creategh [name] : ᴄʀᴇᴀᴛᴇs ᴀ ɴᴇᴡ ʀᴇᴘᴏsɪᴛᴏʀʏ.
-• /ghinfo [owner/repo] : sʜᴏᴡs ʀᴇᴘᴏ ɪɴғᴏ.
-• /ghfiles [owner/repo] [path] : ʟɪsᴛs ғɪʟᴇs ɪɴ ᴀ ʀᴇᴘᴏ ᴘᴀᴛʜ.
-• /delghfile [owner/repo] [path] : ᴅᴇʟᴇᴛᴇs ᴀ ғɪʟᴇ ғʀᴏᴍ ᴀ ʀᴇᴘᴏ.
-• /delgh [owner/repo] : ᴅᴇʟᴇᴛᴇs ᴀ ʀᴇᴘᴏsɪᴛᴏʀʏ.
+• /setghtoken [token] : GitHub token'ınızı kaydeder (Sadece DM).
+• /myrepos : Repolarınızı listeler.
+• /creategh [name] : Yeni repo oluşturur.
 """
 
-HELP_18 = """<b><u>ᴄʜᴀᴛʙᴏᴛ :</u></b>
+HELP_18 = """<b><u>sᴏʜʙᴇᴛ ʙᴏᴛᴜ (ᴄʜᴀᴛʙᴏᴛ) :</u></b>
 
-A MongoDB-powered auto-reply chatbot — no external AI API used.
+Otomatik yanıt sistemi.
 
-• /chatbot on/off : ᴇɴᴀʙʟᴇs ᴏʀ ᴅɪsᴀʙʟᴇs ᴀᴜᴛᴏ-ʀᴇᴘʟʏ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ (ᴀᴅᴍɪɴ ᴏɴʟʏ).
-• /teach [keyword] | [reply] : ᴛᴇᴀᴄʜᴇs ᴛʜᴇ ʙᴏᴛ ᴀ ɴᴇᴡ ʀᴇᴘʟʏ (ᴀᴅᴍɪɴ ᴏɴʟʏ).
-• /unlearn [keyword] : ʀᴇᴍᴏᴠᴇs ᴀ ᴛᴀᴜɢʜᴛ ʀᴇᴘʟʏ (ᴀᴅᴍɪɴ ᴏɴʟʏ).
-• /learned : ʟɪsᴛs ᴇᴠᴇʀʏᴛʜɪɴɢ ʟᴇᴀʀɴᴇᴅ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
+• /chatbot on/off : Otomatik yanıtı açar/kapatır (Yönetici).
+• /teach [kelime] | [yanıt] : Bota yeni bir yanıt öğretir.
+• /unlearn [kelime] : Öğretilen bir yanıtı siler.
 """
 
-HELP_20 = """🔑 <b><u>sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ :</u></b>
+HELP_19 = """🎮 <b><u>ɢʀᴜᴘ ᴏʏᴜɴʟᴀʀı :</u></b>
 
-ɢᴇɴᴇʀᴀᴛᴇ ʏᴏᴜʀ sᴇssɪᴏɴ sᴛʀɪɴɢ sᴀꜰᴇʟʏ ᴅɪʀᴇᴄᴛʟʏ ꜰʀᴏᴍ ᴛᴇʟᴇɢʀᴀᴍ ᴅᴍ.
-
-• /genstring — sᴛᴀʀᴛ ɪɴᴛᴇʀᴀᴄᴛɪᴠᴇ sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛᴏʀ
-
-⭐ <b>Pyrogram v1</b> — ʟᴇɢᴀᴄʏ sᴛʀɪɴɢ ꜰᴏʀᴍᴀᴛ
-✨ <b>Pyrogram v2</b> — ᴍᴏᴅᴇʀɴ sᴛʀɪɴɢ ꜰᴏʀᴍᴀᴛ
-⚡ <b>Telethon</b>    — ᴛᴇʟᴇᴛʜᴏɴ sᴇssɪᴏɴ sᴛʀɪɴɢ
-🤖 <b>Bot Session</b> — ꜰᴏʀ ʙᴏᴛ ᴀᴄᴄᴏᴜɴᴛs
-
-🔒 <i>ʏᴏᴜʀ ᴄʀᴇᴅᴇɴᴛɪᴀʟs ᴀʀᴇ ɴᴇᴠᴇʀ sᴛᴏʀᴇᴅ ᴏɴ ᴛʜᴇ sᴇʀᴠᴇʀ.
-ᴀʟʟ ᴅᴀᴛᴀ ɪs ᴅᴇʟᴇᴛᴇᴅ ɪᴍᴍᴇᴅɪᴀᴛᴇʟʏ ᴀꜰᴛᴇʀ ɢᴇɴᴇʀᴀᴛɪᴏɴ.</i>
+• /dicebattle — Zar savaşı başlatır.
+• /numberbomb — Sayı bombası oyunu.
+• /roulette — Rus ruleti.
+• /triviabattle — Bilgi yarışması.
 """
 
-HELP_21 = """⚡ <b><u>ǫᴜɪᴄᴋ ɢʀᴏᴜᴘ ɢᴀᴍᴇs :</u></b>
+HELP_20 = """🔑 <b><u>sᴇssɪᴏɴ sᴛʀɪɴɢ ᴏʟᴜşᴛᴜʀᴜᴄᴜ :</u></b>
 
-ᴇᴀsʏ ᴏɴᴇ-ᴄʟɪᴄᴋ ɢᴀᴍᴇs ꜰᴏʀ ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs!
-
-⚡ /taprace  — ᴛᴀᴘ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ꜰɪʀꜱᴛ ᴛᴏ ᴡɪɴ ᴄᴏɪɴꜱ
-🎰 /slots    — ꜱᴘɪɴ ᴛʜᴇ ꜱʟᴏᴛ ᴍᴀᴄʜɪɴᴇ ꜰᴏʀ ᴊᴀᴄᴋᴩᴏᴛ
-🔥 /hotvote  — ɢʀᴏᴜᴩ ᴠᴏᴛᴇꜱ ʜᴏᴛ 🔥 ᴏʀ ɴᴏᴛ ❄️ ᴏɴ ᴀ ᴛᴏᴩɪᴄ
-
-💰 <b>ᴄᴏɪɴ ʀᴇᴡᴀʀᴅꜱ :</b>
-  ⚡ Tap Race  — ꜰɪʀꜱᴛ ᴛᴀᴩ ᴡɪɴꜱ <b>20 ᴄᴏɪɴꜱ</b>
-  🎰 Jackpot   — 3 ᴍᴀᴛᴄʜ = <b>50 ᴄᴏɪɴꜱ</b>  |  2 ᴍᴀᴛᴄʜ = <b>15 ᴄᴏɪɴꜱ</b>
-  🔥 Hot Vote  — ᴍᴀᴊᴏʀɪᴛʏ ꜱɪᴅᴇ ᴇᴀʀɴꜱ <b>10 ᴄᴏɪɴꜱ</b>
-
-<i>ᴀʟʟ ɢᴀᴍᴇꜱ ᴀʀᴇ ɢʀᴏᴜᴩ-ᴏɴʟʏ. ᴏɴᴇ ɢᴀᴍᴇ ᴩᴇʀ ᴄʜᴀᴛ ᴀᴛ ᴀ ᴛɪᴍᴇ.</i>
+• /genstring — Etkileşimli session string oluşturucuyu başlatır.
 """
 
-HELP_22 = """⚔️ <b><u>ʙᴀɴ & ᴍᴏᴅᴇʀᴀᴛɪᴏɴ ᴄᴏᴍᴍᴀɴᴅs :</u></b>
+HELP_21 = """⚡ <b><u>ʜıᴢʟı ɢʀᴜᴘ ᴏʏᴜɴʟᴀʀı :</u></b>
 
-• /ban [ᴜsᴇʀ/ʀᴇᴘʟʏ] — ʙᴀɴs ᴀ ᴜsᴇʀ ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ.
-• /unban [ᴜsᴇʀ/ʀᴇᴘʟʏ] — ᴜɴʙᴀɴs ᴀ ʙᴀɴɴᴇᴅ ᴜsᴇʀ.
-• /mute [ᴜsᴇʀ/ʀᴇᴘʟʏ] — ᴍᴜᴛᴇs ᴀ ᴜsᴇʀ (ɴᴏ ᴍᴇssᴀɢᴇs).
-• /unmute [ᴜsᴇʀ/ʀᴇᴘʟʏ] — ᴜɴᴍᴜᴛᴇs ᴀ ᴜsᴇʀ.
-• /tmute [ᴜsᴇʀ] [Xs/m/h/d] — ᴛᴇᴍᴘᴏʀᴀʀɪʟʏ ᴍᴜᴛᴇs ᴀ ᴜsᴇʀ.
-• /kick [ᴜsᴇʀ/ʀᴇᴘʟʏ] — ᴋɪᴄᴋs ᴀ ᴜsᴇʀ ᴏᴜᴛ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
-• /promote [ᴜsᴇʀ/ʀᴇᴘʟʏ] — ᴘʀᴏᴍᴏᴛᴇs ᴀ ᴜsᴇʀ ᴀs ᴀᴅᴍɪɴ.
-• /demote [ᴜsᴇʀ/ʀᴇᴘʟʏ] — ᴅᴇᴍᴏᴛᴇs ᴀɴ ᴀᴅᴍɪɴ.
-• /warn [ᴜsᴇʀ/ʀᴇᴘʟʏ] — ɢɪᴠᴇs ᴀ ᴡᴀʀɴɪɴɢ (3 ᴡᴀʀɴs = ᴀᴜᴛᴏ-ʙᴀɴ).
-• /rmwarn [ᴜsᴇʀ/ʀᴇᴘʟʏ] — ʀᴇᴍᴏᴠᴇs ᴡᴀʀɴɪɴɢs.
-• /del — ᴅᴇʟᴇᴛᴇs ᴀ ʀᴇᴘʟɪᴇᴅ ᴍᴇssᴀɢᴇ.
-• /purge — ᴘᴜʀɢᴇs ᴍᴇssᴀɢᴇs ᴜᴘ ᴛᴏ ʀᴇᴘʟʏ.
-
-<i>ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ʀᴇǫᴜɪʀᴇ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.</i>
+• /taprace — Butona ilk basan kazanır.
+• /slots — Slot makinesini çevirir.
+• /hotvote — Grup oylaması başlatır.
 """
 
-HELP_23 = """📌 <b><u>ᴛᴀɢ ᴄᴏᴍᴍᴀɴᴅs :</u></b>
+HELP_22 = """⚔️ <b><u>ʏᴀsᴀᴋʟᴀᴍᴀ ᴠᴇ ᴍᴏᴅᴇʀᴀsʏᴏɴ :</u></b>
 
-• /tagall ᴏʀ /all — ᴛᴀɢs ᴀʟʟ ᴍᴇᴍʙᴇʀs ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
-• /admintag ᴏʀ /admins — ᴛᴀɢs ᴀʟʟ ᴀᴅᴍɪɴs.
-• /hitag — ᴛᴀɢs ᴍᴇᴍʙᴇʀs ᴏɴᴇ-ʙʏ-ᴏɴᴇ ᴡɪᴛʜ ᴀ ᴅᴇʟᴀʏ.
-• /lifetag — ᴛᴀɢs ᴀʟʟ ᴍᴇᴍʙᴇʀs ᴡɪᴛʜ ᴄᴏɴᴛɪɴᴜᴏᴜs ᴛᴀɢɢɪɴɢ.
-• /gmtag — ᴛᴀɢs ᴇᴠᴇʀʏ ᴍᴇᴍʙᴇʀ ɪɴᴅɪᴠɪᴅᴜᴀʟʟʏ.
-• /gntag — sɪʟᴇɴᴛ ᴛᴀɢ ᴡɪᴛʜᴏᴜᴛ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ.
-• /cancel ᴏʀ /histop — sᴛᴏᴘs ᴀɴʏ ᴏɴɢᴏɪɴɢ ᴛᴀɢ ᴏᴘᴇʀᴀᴛɪᴏɴ.
-• /mention [ᴍᴇssᴀɢᴇ] — ᴍᴇɴᴛɪᴏɴs ᴀʟʟ ᴍᴇᴍʙᴇʀs ᴡɪᴛʜ ᴀ ᴄᴜsᴛᴏᴍ ᴍᴇssᴀɢᴇ.
-
-<i>ᴀᴅᴍɪɴ ʀɪɢʜᴛs ʀᴇǫᴜɪʀᴇᴅ.</i>
+• /ban [ᴋᴜʟʟᴀɴıᴄı/ʏᴀɴıᴛ] — Kullanıcıyı gruptan yasaklar.
+• /unban [ᴋᴜʟʟᴀɴıᴄı/ʏᴀɴıᴛ] — Yasağı kaldırır.
+• /mute [ᴋᴜʟʟᴀɴıᴄı/ʏᴀɴıᴛ] — Kullanıcıyı susturur.
+• /unmute [ᴋᴜʟʟᴀɴıᴄı/ʏᴀɴıᴛ] — Susturmayı kaldırır.
+• /kick [ᴋᴜʟʟᴀɴıᴄı/ʏᴀɴıᴛ] — Kullanıcıyı gruptan atar.
+• /promote [ᴋᴜʟʟᴀɴıᴄı/ʏᴀɴıᴛ] — Kullanıcıyı yönetici yapar.
+• /demote [ᴋᴜʟʟᴀɴıᴄı/ʏᴀɴıᴛ] — Yöneticiliği alır.
+• /warn [ᴋᴜʟʟᴀɴıᴄı/ʏᴀɴıᴛ] — Kullanıcıyı uyarır (3 uyarı = ban).
 """
 
-HELP_24 = """👋 <b><u>ᴡᴇʟᴄᴏᴍᴇ & ɴɪɢʜᴛᴍᴏᴅᴇ :</u></b>
+HELP_23 = """📌 <b><u>ᴇᴛɪᴋᴇᴛ ᴋᴏᴍᴜᴛʟᴀʀı :</u></b>
 
-<b>ᴡᴇʟᴄᴏᴍᴇ :</b>
-• /welcome on — ᴇɴᴀʙʟᴇs ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ.
-• /welcome off — ᴅɪsᴀʙʟᴇs ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ.
-• /welcome [ᴛᴇxᴛ] — sᴇᴛs ᴀ ᴄᴜsᴛᴏᴍ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ.
-
-<b>ɴɪɢʜᴛᴍᴏᴅᴇ :</b>
-• /nightmode on — ʟᴏᴄᴋs ᴛʜᴇ ɢʀᴏᴜᴘ ᴅᴜʀɪɴɢ ᴀ sᴇᴛ ɴɪɢʜᴛ ᴡɪɴᴅᴏᴡ.
-• /nightmode off — ᴅɪsᴀʙʟᴇs ɴɪɢʜᴛᴍᴏᴅᴇ.
-• /nightmode — sʜᴏᴡs ᴄᴜʀʀᴇɴᴛ ɴɪɢʜᴛᴍᴏᴅᴇ sᴛᴀᴛᴜs.
-
-<i>ᴀᴅᴍɪɴ ʀɪɢʜᴛs ʀᴇǫᴜɪʀᴇᴅ.</i>
+• /tagall ᴠᴇʏᴀ /all — Gruptaki herkesi etiketler.
+• /admintag ᴠᴇʏᴀ /admins — Tüm yöneticileri etiketler.
+• /cancel ᴠᴇʏᴀ /histop — Devam eden etiketleme işlemini durdurur.
 """
 
-HELP_25 = """💑 <b><u>ᴄᴏᴜᴘʟᴇ ᴏғ ᴛʜᴇ ᴅᴀʏ :</u></b>
+HELP_24 = """👋 <b><u>ᴋᴀʀşıʟᴀᴍᴀ ᴠᴇ ɢᴇᴄᴇ ᴍᴏᴅᴜ :</u></b>
 
-• /couple — sᴇʟᴇᴄᴛs ᴛᴡᴏ ʀᴀɴᴅᴏᴍ ᴍᴇᴍʙᴇʀs ᴀs ᴛᴏᴅᴀʏ's ᴄᴏᴜᴘʟᴇ ❤️
-• /couples — sᴀᴍᴇ ᴀs /couple, sʜᴏᴡs ᴀ ғʀᴀᴍᴇᴅ ᴘʜᴏᴛᴏ ᴡɪᴛʜ ʙᴏᴛʜ ᴘʀᴏғɪʟᴇ ᴘɪᴄs 🖼️
+<b>ᴋᴀʀşıʟᴀᴍᴀ :</b>
+• /welcome on — Karşılama mesajını açar.
+• /welcome off — Karşılama mesajını kapatır.
+• /welcome [ᴍᴇsᴀᴊ] — Özel bir karşılama mesajı ayarlar.
 
-📅 ᴀ ɴᴇᴡ ᴄᴏᴜᴘʟᴇ ɪs ᴄʜᴏsᴇɴ ᴇᴠᴇʀʏ ᴅᴀʏ.
+<b>ɢᴇᴄᴇ ᴍᴏᴅᴜ :</b>
+• /nightmode on — Gece modunu açar.
 """
 
-HELP_26 = """ℹ️ <b><u>ᴜsᴇʀ ɪɴғᴏ :</u></b>
+HELP_25 = """💑 <b><u>ɢüɴüɴ çɪғᴛɪ :</u></b>
 
-• /info [ᴜsᴇʀ/ʀᴇᴘʟʏ] — sʜᴏᴡs ᴅᴇᴛᴀɪʟᴇᴅ ɪɴғᴏ ᴀʙᴏᴜᴛ ᴀ ᴜsᴇʀ (ɪᴅ, ɴᴀᴍᴇ, ᴅᴘ, ᴅᴄ ᴇᴛᴄ).
-• /id — sʜᴏᴡs ʏᴏᴜʀ ᴜsᴇʀ ɪᴅ ᴏʀ ᴛʜᴇ ᴄʜᴀᴛ ɪᴅ.
-• /whois [ᴜsᴇʀ/ʀᴇᴘʟʏ] — ᴀʟɪᴀs ғᴏʀ /info.
+• /couple — Günün çiftini seçer ❤️
+• /couples — Günün çiftini fotoğraflı şekilde gösterir 🖼️
 """
 
-HELP_27 = """⚡ <b><u>ᴛʀᴜᴛʜ & ᴅᴀʀᴇ :</u></b>
+HELP_26 = """ℹ️ <b><u>ᴋᴜʟʟᴀɴıᴄı ʙɪʟɢɪsɪ :</u></b>
 
-• /truth — sᴇɴᴅs ᴀ ʀᴀɴᴅᴏᴍ ᴛʀᴜᴛʜ ǫᴜᴇsᴛɪᴏɴ.
-• /dare — sᴇɴᴅs ᴀ ʀᴀɴᴅᴏᴍ ᴅᴀʀᴇ ᴄʜᴀʟʟᴇɴɢᴇ.
-
-ᴘʟᴀʏ ɪɴ ɢʀᴏᴜᴘs ᴛᴏ ᴋᴇᴇᴘ ᴛʜᴇ ᴄʜᴀᴛ ᴀᴄᴛɪᴠᴇ! 🎲
+• /info [ᴋᴜʟʟᴀɴıᴄı/ʏᴀɴıᴛ] — Kullanıcı hakkında detaylı bilgi gösterir.
+• /id — Sizin veya sohbetin ID'sini gösterir.
 """
 
-HELP_28 = """📋 <b><u>ɴᴏᴛᴇs & ғɪʟᴛᴇʀs :</u></b>
+HELP_27 = """⚡ <b><u>ᴅᴏğʀᴜʟᴜᴋ ᴠᴇ ᴄᴇsᴀʀᴇᴛ :</u></b>
 
-<b>ɴᴏᴛᴇs :</b>
-• /save [ɴᴀᴍᴇ] [ᴄᴏɴᴛᴇɴᴛ/ʀᴇᴘʟʏ] — sᴀᴠᴇs ᴀ ɴᴏᴛᴇ.
-• /get [ɴᴀᴍᴇ] ᴏʀ #ɴᴀᴍᴇ — ʀᴇᴛʀɪᴇᴠᴇs ᴀ sᴀᴠᴇᴅ ɴᴏᴛᴇ.
-• /notes — ʟɪsᴛs ᴀʟʟ ɴᴏᴛᴇs ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
-• /clear [ɴᴀᴍᴇ] — ᴅᴇʟᴇᴛᴇs ᴀ ɴᴏᴛᴇ.
-• /clearall — ᴅᴇʟᴇᴛᴇs ᴀʟʟ ɴᴏᴛᴇs.
-• /privatenotes on/off — sᴇɴᴅs ɴᴏᴛᴇs ɪɴ ᴘᴍ.
-
-<b>ғɪʟᴛᴇʀs :</b>
-• /filter [ᴋᴇʏᴡᴏʀᴅ] [ʀᴇᴘʟʏ] — sᴇᴛs ᴀɴ ᴀᴜᴛᴏ-ʀᴇᴘʟʏ ᴛʀɪɢɢᴇʀ.
-• /filters — ʟɪsᴛs ᴀʟʟ ᴀᴄᴛɪᴠᴇ ғɪʟᴛᴇʀs.
-• /stopfilter [ᴋᴇʏᴡᴏʀᴅ] — ʀᴇᴍᴏᴠᴇs ᴀ ғɪʟᴛᴇʀ.
-• /stopall — ᴄʟᴇᴀʀs ᴀʟʟ ғɪʟᴛᴇʀs.
+• /truth — Rastgele bir doğruluk sorusu sorar.
+• /dare — Rastgele bir cesaret görevi verir.
 """
 
-HELP_29 = """💤 <b><u>ᴀғᴋ (ᴀᴡᴀʏ ғʀᴏᴍ ᴋᴇʏʙᴏᴀʀᴅ) :</u></b>
+HELP_28 = """📋 <b><u>ɴᴏᴛʟᴀʀ ᴠᴇ ғɪʟᴛʀᴇʟᴇʀ :</u></b>
 
-• /afk [ʀᴇᴀsᴏɴ] — ᴍᴀʀᴋs ʏᴏᴜ ᴀs ᴀᴡᴀʏ. ᴛʜᴇ ʙᴏᴛ ᴡɪʟʟ ɴᴏᴛɪғʏ ᴀɴʏᴏɴᴇ ᴡʜᴏ ᴍᴇɴᴛɪᴏɴs ʏᴏᴜ.
+<b>ɴᴏᴛʟᴀʀ :</b>
+• /save [ᴀᴅ] [ɪçᴇʀɪᴋ/ʏᴀɴıᴛ] — Bir not kaydeder.
+• /get [ᴀᴅ] ᴠᴇʏᴀ #ᴀᴅ — Kaydedilmiş bir notu getirir.
+• /notes — Tüm notları listeler.
+• /clear [ᴀᴅ] — Bir notu siler.
 
-ʏᴏᴜ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴄᴏᴍᴇ ʙᴀᴄᴋ ᴡʜᴇɴ ʏᴏᴜ sᴇɴᴅ ᴀ ᴍᴇssᴀɢᴇ. 🌙
+<b>ғɪʟᴛʀᴇʟᴇʀ :</b>
+• /filter [ᴋᴇʟɪᴍᴇ] [ʏᴀɴıᴛ] — Otomatik bir yanıt filtresi ayarlar.
+• /stopfilter [ᴋᴇʟɪᴍᴇ] — Filtreyi siler.
 """
 
-HELP_30 = """💰 <b><u>ᴄʀʏᴘᴛᴏ & ᴜᴘɪ ᴛᴏᴏʟs :</u></b>
+HELP_29 = """💤 <b><u>ᴀғᴋ (ᴜᴢᴀᴋᴛᴀ) :</u></b>
 
-<b>ᴄʀʏᴘᴛᴏ :</b>
-• /ton — sʜᴏᴡs ʟɪᴠᴇ ᴛᴏɴ ᴄᴏɪɴ ᴘʀɪᴄᴇ.
-• /usdt — sʜᴏᴡs ʟɪᴠᴇ ᴜsᴅᴛ ᴘʀɪᴄᴇ.
-• /balance [ᴡᴀʟʟᴇᴛ] — ᴄʜᴇᴄᴋs ᴛᴏɴ ᴡᴀʟʟᴇᴛ ʙᴀʟᴀɴᴄᴇ.
-
-<b>ᴜᴘɪ :</b>
-• /setupi [ᴜᴘɪ-ɪᴅ] — sᴀᴠᴇs ʏᴏᴜʀ ᴜᴘɪ ɪᴅ ᴛᴏ ᴛʜᴇ ʙᴏᴛ.
-• /gen [ᴀᴍᴏᴜɴᴛ] [ɴᴏᴛᴇ] — ɢᴇɴᴇʀᴀᴛᴇs ᴀ ᴜᴘɪ ᴘᴀʏᴍᴇɴᴛ ǫʀ ᴄᴏᴅᴇ.
+• /afk [sᴇʙᴇᴘ] — Sizi AFK (Uzaktayım) olarak işaretler. Sizi etiketleyenlere bot otomatik cevap verir.
 """
 
-HELP_31 = """🔊 <b><u>ᴠᴄ ʟᴏɢɢᴇʀ :</u></b>
+HELP_30 = """💰 <b><u>ᴋʀɪᴘᴛᴏ ᴠᴇ ᴜᴘɪ :</u></b>
 
-ʟᴏɢs ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴊᴏɪɴ/ʟᴇᴀᴠᴇ ᴇᴠᴇɴᴛs ᴛᴏ ᴀ ᴅᴇsɪɢɴᴀᴛᴇᴅ ᴄʜᴀᴛ.
-
-• /vclogger on — ᴇɴᴀʙʟᴇs ᴠᴄ ʟᴏɢɢɪɴɢ.
-• /vclogger off — ᴅɪsᴀʙʟᴇs ᴠᴄ ʟᴏɢɢɪɴɢ.
-• /vclogger set [ᴄʜᴀᴛ-ɪᴅ] — sᴇᴛs ᴛʜᴇ ʟᴏɢ ᴅᴇsᴛɪɴᴀᴛɪᴏɴ ᴄʜᴀᴛ.
-• /vclogger status — sʜᴏᴡs ᴄᴜʀʀᴇɴᴛ ᴠᴄ ʟᴏɢɢᴇʀ ᴄᴏɴғɪɢ.
-
-<i>ᴀᴅᴍɪɴ ʀɪɢʜᴛs ʀᴇǫᴜɪʀᴇᴅ.</i>
+• /ton — Canlı TON fiyatını gösterir.
+• /usdt — Canlı USDT fiyatını gösterir.
 """
 
-HELP_32 = """📢 <b><u>ꜰᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ :</u></b>
+HELP_31 = """🔊 <b><u>sᴇsʟɪ sᴏʜʙᴇᴛ ʟᴏɢʟᴀʀı (ᴠᴄ ʟᴏɢɢᴇʀ) :</u></b>
 
-Require users to join a channel before using bot commands in the group.
+Sesli sohbete katılma/ayrılma etkinliklerini belirlediğiniz bir gruba kaydeder.
 
-• /fsub @channel — set required channel
-• /fsub channel_id — set by channel ID
-• /fsub off — disable force subscribe
-
-⚠️ <i>Bot must be admin in the channel. Admins are exempt from FSub check.</i>
+• /vclogger on — Sesli sohbet loglarını açar.
+• /vclogger off — Sesli sohbet loglarını kapatır.
+• /vclogger set [sᴏʜʙᴇᴛ-ɪᴅ] — Logların gönderileceği hedef sohbeti ayarlar.
 """
 
-HELP_33 = """🔔 <b><u>ᴀᴜᴛᴏ ᴀᴘᴘʀᴏᴠᴇ :</u></b>
+HELP_32 = """📢 <b><u>ᴢᴏʀᴜɴʟᴜ ᴀʙᴏɴᴇʟɪᴋ (ғsᴜʙ) :</u></b>
 
-Automatically approve all join requests to your group.
+Bot komutlarını kullanmadan önce kullanıcıların bir kanala katılmasını zorunlu kılar.
 
-• /autoapprove on — enable auto approve
-• /autoapprove off — disable auto approve
-• /autoapprove — check current status
-
-⚠️ <i>Bot must have "Add Members" permission in the group.</i>
+• /fsub @kanal_adi — Zorunlu kanalı ayarlar.
+• /fsub off — Zorunlu aboneliği kapatır.
 """
 
-HELP_34 = """🛡️ <b><u>ɢᴜᴀʀᴅɪᴀɴ — ᴀɴᴛɪ ꜰʟᴏᴏᴅ :</u></b>
+HELP_33 = """🔔 <b><u>ᴏᴛᴏᴍᴀᴛɪᴋ ᴏɴᴀʏ :</u></b>
 
-Protect your group from message flooding.
-Users who send 5+ messages in 5 seconds are automatically muted for 5 minutes.
+Gruba katılma isteklerini otomatik onaylar.
 
-• /guardian on — enable guardian/anti-flood
-• /guardian off — disable guardian
-• /guardian — check status
-
-⚠️ <i>Admins are never muted. Bot must have restrict permissions.</i>
+• /autoapprove on — Otomatik onayı açar.
+• /autoapprove off — Otomatik onayı kapatır.
 """
 
-HELP_35 = """❤️ <b><u>ꜰᴇᴇʟɪɴɢs / ʀᴇᴀᴄᴛɪᴏɴs :</u></b>
+HELP_34 = """🛡️ <b><u>ɢᴜᴀʀᴅɪᴀɴ — ᴀɴᴛɪ sᴘᴀᴍ :</u></b>
 
-Express feelings with anime GIFs! Reply to a user or mention them.
+Grubunuzu spam mesajlara karşı korur.
 
-• /hug @user — hug someone 🤗
-• /pat @user — pat someone 🥰
-• /slap @user — slap someone 👋
-• /kiss @user — kiss someone 😘
-• /cuddle @user — cuddle 🫂
-• /wave @user — wave 👋
-• /poke @user — poke 👉
-• /bite @user — bite 😬
-• /punch @user — punch 👊
-• /handshake @user — shake hands 🤝
-• /smile @user — smile 😄
-• /happy — express happiness 😊
-• /sad — express sadness 😢
-• /blush — blush 😊
-• /dance — dance 💃
+• /guardian on — Korumayı açar.
+• /guardian off — Korumayı kapatır.
 """
 
-HELP_36 = """👬 <b><u>ʙʀᴏᴛʜᴇʀ / sɪsᴛᴇʀ ʀᴇʟᴀᴛɪᴏɴs :</u></b>
+HELP_35 = """❤️ <b><u>ᴅᴜʏɢᴜʟᴀʀ ᴠᴇ ᴛᴇᴘᴋɪʟᴇʀ :</u></b>
 
-Set family relationships with other users.
+Kullanıcılara anime GIF'leriyle duygularınızı ifade edin!
 
-• /brother @user — set your brother
-• /bro — see your current brother
-• /sister @user — set your sister
-• /sis — see your current sister
-• /family — see all your relations
-• /myrelations — same as /family
+• /hug, /pat, /slap, /kiss, /cuddle vb.
 """
 
-HELP_37 = """🔊 <b><u>ᴛᴛs — ᴛᴇxᴛ ᴛᴏ sᴘᴇᴇᴄʜ :</u></b>
+HELP_36 = """👬 <b><u>ᴀɪʟᴇ ɪʟɪşᴋɪʟᴇʀɪ :</u></b>
 
-Convert any text to speech in 30+ languages!
+Kullanıcılarla aile ilişkileri (kardeş vb.) kurun.
 
-• /tts [text] — converts using group language
-• /tts hi नमस्ते — Hindi speech
-• /tts en Hello world — English speech
-• /tts ar مرحبا — Arabic speech
-
-<b>🌍 Common Language Codes:</b>
-<code>hi</code> Hindi · <code>en</code> English · <code>te</code> Telugu
-<code>ta</code> Tamil · <code>ml</code> Malayalam · <code>bn</code> Bengali
-<code>ar</code> Arabic · <code>fr</code> French · <code>de</code> German
-<code>es</code> Spanish · <code>ja</code> Japanese · <code>ko</code> Korean
-<code>ru</code> Russian · <code>tr</code> Turkish · <code>zh</code> Chinese
-<code>ur</code> Urdu · <code>th</code> Thai · <code>vi</code> Vietnamese
+• /brother @kullanici — Kardeş olarak ekler.
 """
 
-HELP_19 = """🎮 <b><u>ɢʀᴏᴜᴘ ɢᴀᴍᴇs :</u></b>
+HELP_37 = """🔊 <b><u>ᴍᴇᴛɪɴᴅᴇɴ sᴇsᴇ (ᴛᴛs) :</u></b>
 
-ᴜsᴇ ᴛʜᴇsᴇ ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ᴘʟᴀʏ ɪɴᴛᴇʀᴀᴄᴛɪᴠᴇ ɢᴀᴍᴇs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ!
+Metinleri sese dönüştürür!
 
-🎲 <b>ᴅɪᴄᴇ ʙᴀᴛᴛʟᴇ</b>
-• /dicebattle — sᴛᴀʀᴛ ᴀ ɢʀᴏᴜᴘ ᴅɪᴄᴇ ʀᴏʟʟɪɴɢ ʙᴀᴛᴛʟᴇ. ᴇᴠᴇʀʏᴏɴᴇ ᴊᴏɪɴs, ʜɪɢʜᴇsᴛ ʀᴏʟʟ ᴡɪɴs!
-
-💣 <b>ɴᴜᴍʙᴇʀ ʙᴏᴍʙ</b>
-• /numberbomb — ᴘɪᴄᴋ ᴀ ɴᴜᴍʙᴇʀ 1–20. ᴏɴᴇ ɪs ᴛʜᴇ ʙᴏᴍʙ. ᴅᴏɴ'ᴛ ᴇxᴘʟᴏᴅᴇ!
-
-🎡 <b>ʀᴜssɪᴀɴ ʀᴏᴜʟᴇᴛᴛᴇ</b>
-• /roulette — sᴛᴀʀᴛ ᴀ ɢʀᴏᴜᴘ ʀᴏᴜʟᴇᴛᴛᴇ. ᴇᴀᴄʜ ᴘʟᴀʏᴇʀ ᴘᴜʟʟs ᴛʜᴇ ᴛʀɪɢɢᴇʀ ɪɴ ᴛᴜʀɴ.
-
-🏆 <b>ᴛʀɪᴠɪᴀ ʙᴀᴛᴛʟᴇ ʀᴏʏᴀʟᴇ</b>
-• /triviabattle ᴏʀ /battle — sᴛᴀʀᴛ ᴀ 5-ʀᴏᴜɴᴅ ᴍᴜʟᴛɪᴘʟᴀʏᴇʀ ǫᴜɪᴢ. ᴇᴠᴇʀʏᴏɴᴇ ᴊᴏɪɴs, ᴀɴsᴡᴇʀ ғᴀsᴛ!
-• /triviatop — ᴠɪᴇᴡ ᴛʜᴇ ɢʟᴏʙᴀʟ ᴛʀɪᴠɪᴀ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ.
-
-🃏 <b>ᴄʜᴀᴛ ᴍɪɴɪ-ɢᴀᴍᴇs</b>
-• /wordgame — ɢᴜᴇss ᴛʜᴇ ᴡᴏʀᴅ (ᴡɪᴛʜ ɪᴍᴀɢᴇ ʜɪɴᴛ).
-• /emojigame — ɢᴜᴇss ᴛʜᴇ ᴇᴍᴏᴊɪ.
-• /flaggame — ɢᴜᴇss ᴛʜᴇ ᴄᴏᴜɴᴛʀʏ ғʀᴏᴍ ɪᴛs ғʟᴀɢ.
-• /gametop — ᴠɪᴇᴡ ᴛʜᴇ ᴡᴏʀᴅɢᴀᴍᴇ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ.
-
-<i>ᴀʟʟ ɢᴀᴍᴇs ᴀʀᴇ ɢʀᴏᴜᴘ-ᴏɴʟʏ ᴀɴᴅ ᴡᴏʀᴋ ᴡɪᴛʜ ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴs.</i>
+• /tts [metin] — Metni grubun dilinde sese çevirir.
 """
