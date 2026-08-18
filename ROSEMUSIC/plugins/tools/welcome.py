@@ -180,20 +180,20 @@ async def auto_state(_, message):
         state = message.text.split(None, 1)[1].strip().lower()
         if state == "off":
             if A:
-                await message.reply_text("**ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ !**")
+                await message.reply_text("**ʜᴏŞ ɢᴇʟᴅİɴ ᴍᴇsᴀᴊı ᴢᴀᴛᴇɴ ᴋᴀᴘᴀʟı !**")
             else:
                 await wlcm.add_wlcm(chat_id)
-                await message.reply_text(f"**ᴅɪsᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɪɴ** {message.chat.title}")
+                await message.reply_text(f"**{message.chat.title} İÇİɴ ʜᴏŞ ɢᴇʟᴅİɴ ᴍᴇsᴀᴊı ᴋᴀᴘᴀᴛıʟᴅı**")
         elif state == "on":
             if not A:
-                await message.reply_text("**ᴇɴᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ.**")
+                await message.reply_text("**ʜᴏŞ ɢᴇʟᴅİɴ ᴍᴇsᴀᴊı ᴀÇıʟᴅı.**")
             else:
                 await wlcm.rm_wlcm(chat_id)
-                await message.reply_text(f"**ᴇɴᴀʙʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ɪɴ** {message.chat.title}")
+                await message.reply_text(f"**{message.chat.title} İÇİɴ ʜᴏŞ ɢᴇʟᴅİɴ ᴍᴇsᴀᴊı ᴀÇıʟᴅı**")
         else:
             await message.reply_text(usage)
     else:
-        await message.reply("**sᴏʀʀʏ ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇɴᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ!**")
+        await message.reply("**sᴀᴅᴇᴄᴇ ʏÖɴᴇᴛİᴄİʟᴇʀ ʜᴏŞ ɢᴇʟᴅİɴ ᴍᴇsᴀᴊıɴı ᴀÇᴀʙİʟİʀ!**")
 
 
 @app.on_chat_member_updated(filters.group, group=-3)
@@ -235,14 +235,14 @@ async def greet_new_member(_, member: ChatMemberUpdated):
             add_link  = f"https://t.me/{app.username}?startgroup=true"
 
             caption = (
-                f"{tx(_TX_BOOM,'💥')} <b>ᴡᴇʟᴄᴏᴍᴇ</b> {tx(_TX_BOOM,'💥')}\n\n"
+                f"{tx(_TX_BOOM,'💥')} <b>ʜᴏŞ ɢᴇʟᴅİɴ</b> {tx(_TX_BOOM,'💥')}\n\n"
                 f"❤️‍🔥 <b>▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬</b> ❤️‍🔥\n\n"
-                f"{tx(_TX_CROWN,'👑')} <b>ɴᴀᴍᴇ :</b> {user.mention}\n"
-                f"{tx(_TX_OK,'✅')} <b>ɪᴅ :</b> <code>{user.id}</code>\n"
-                f"{tx(_TX_ROSE,'🌹')} <b>ᴜ_ɴᴀᴍᴇ :</b> @{user.username if user.username else 'None'}\n"
-                f"{tx(_TX_OK,'✅')} <b>ᴍᴇᴍʙᴇʀs :</b> {count}\n\n"
+                f"{tx(_TX_CROWN,'👑')} <b>İsİᴍ :</b> {user.mention}\n"
+                f"{tx(_TX_OK,'✅')} <b>ᴋİᴍʟİᴋ :</b> <code>{user.id}</code>\n"
+                f"{tx(_TX_ROSE,'🌹')} <b>ᴋᴜʟʟᴀɴıᴄı ᴀᴅı :</b> @{user.username if user.username else 'Yok'}\n"
+                f"{tx(_TX_OK,'✅')} <b>Üʏᴇ SᴀʏıSı :</b> {count}\n\n"
                 f"🤗😇 <b>▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬</b> 😇🤗\n\n"
-                f"🌚 <i>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ɢʀᴏᴜᴘ! ᴍᴀᴋᴇ ʏᴏᴜʀsᴇʟғ ᴀᴛ ʜᴏᴍᴇ ᴀɴᴅ ʜᴀᴠᴇ ᴀ ɢʀᴇᴀᴛ ᴛɪᴍᴇ!</i> {e1}\n\n"
+                f"🌚 <i>ɢʀᴜʙᴀ ʜᴏŞ ɢᴇʟᴅİɴ! ᴋᴇɴᴅİɴİ ᴇᴠİɴᴅᴇ ʜİssᴇᴛ ᴠᴇ İʏİ ᴠᴀᴋİᴛ ɢᴇÇİʀ!</i> {e1}\n\n"
                 f"{tx(_TX_HEART,'❤️')} {tx(_TX_GEM,'💎')} 👀 🌹 👻"
             )
 
@@ -254,14 +254,14 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 reply_markup=InlineKeyboardMarkup([
                     [
                         InlineKeyboardButton(
-                            "๏ ᴠɪᴇᴡ ɴᴇᴡ ᴍᴇᴍʙᴇʀ ๏",
+                            "๏ ʏᴇɴİ Üʏᴇʏİ ɢÖʀ ๏",
                             url=deep_link,
                             style=ButtonStyle.PRIMARY,
                         )
                     ],
                     [
                         InlineKeyboardButton(
-                            "✙ ᴋɪᴅɴᴀᴘ ᴍᴇ ✙",
+                            "✙ ʙᴇɴİ ɢʀᴜʙᴀ ᴇᴋʟᴇ ✙",
                             url=add_link,
                             style=ButtonStyle.DANGER,
                         )

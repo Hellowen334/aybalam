@@ -99,12 +99,12 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
 
             caption = (
                 f"❅─────✧❅✦❅✧─────❅\n\n"
-                f"🌚 {e1} <b>ᴀ ᴍᴇᴍʙᴇʀ ʟᴇғᴛ ᴛʜᴇ ɢʀᴏᴜᴘ</b> 🌹\n\n"
+                f"🌚 {e1} <b>ʙİʀ Üʏᴇ ɢʀᴜᴘᴛᴀɴ ᴀʏʀıʟᴅı</b> 🌹\n\n"
                 f"☄️ <b>➻</b> {member.old_chat_member.user.mention}\n\n"
                 f"❤️‍🩹 <b>▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬</b> ❤️‍🔥\n\n"
-                f"👀 ✨ <b>ʙʏᴇ, ᴅᴇᴀʀ! ᴛʜᴀɴᴋs ғᴏʀ ᴛʜᴇ ᴍᴇᴍᴏʀɪᴇs — ᴄᴏᴍᴇ ʙᴀᴄᴋ sᴏᴏɴ</b> ✨ 👀\n\n"
+                f"👀 ✨ <b>ʜᴏŞÇᴀᴋᴀʟ! ɢÜᴢᴇʟ ᴀɴıʟᴀʀ İÇİɴ ᴛᴇŞᴇᴋᴋÜʀʟᴇʀ — ʏİɴᴇ ʙᴇᴋʟᴇʀİᴢ</b> ✨ 👀\n\n"
                 f"👻 {e2} <b>▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬</b> {e3} 😇\n\n"
-                f"🌹 <b>ㅤ•─╼⃝𖠁 ʙʏᴇ ♡︎ ʙᴀʙʏ 𖠁⃝╾─•</b> 🌹\n\n"
+                f"🌹 <b>ㅤ•─╼⃝𖠁 ʜᴏŞÇᴀᴋᴀʟ ♡︎ ʙᴇʙᴇĞİᴍ 𖠁⃝╾─•</b> 🌹\n\n"
                 f"❤️‍🔥 <b>{BRAND_NAME}</b>"
             )
 
@@ -117,7 +117,7 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
                 reply_markup=InlineKeyboardMarkup([
                     [
                         InlineKeyboardButton(
-                            "👀 ᴠɪᴇᴡ ᴜsᴇʀ 👀",
+                            "👀 Üʏᴇʏİ ɢÖʀ 👀",
                             url=deep_link,
                             style=ButtonStyle.DANGER,
                         )
@@ -146,13 +146,13 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
             msg = await client.send_message(
                 chat_id=member.chat.id,
                 text=(
-                        f"🌚 {e1} <b>ᴀ ᴍᴇᴍʙᴇʀ ʟᴇғᴛ ᴛʜᴇ ɢʀᴏᴜᴘ</b> 🌹\n\n"
+                        f"🌚 {e1} <b>ʙİʀ Üʏᴇ ɢʀᴜᴘᴛᴀɴ ᴀʏʀıʟᴅı</b> 🌹\n\n"
                     f"☄️ <b>➻</b> {user.mention}\n\n"
-                    f"👻 ✨ <b>ʙʏᴇ, ᴅᴇᴀʀ — ᴄᴏᴍᴇ ʙᴀᴄᴋ sᴏᴏɴ!</b> ✨ 😇\n\n"
-                    f"🌹 <b>ʙʏᴇ ♡ ʙᴀʙʏ</b> 🌹 {e2}\n\n❤️‍🔥 <b>{BRAND_NAME}</b>"
+                    f"👻 ✨ <b>ʜᴏŞÇᴀᴋᴀʟ — ʏİɴᴇ ʙᴇᴋʟᴇʀİᴢ!</b> ✨ 😇\n\n"
+                    f"🌹 <b>ʜᴏŞÇᴀᴋᴀʟ ♡ ʙᴇʙᴇĞİᴍ</b> 🌹 {e2}\n\n❤️‍🔥 <b>{BRAND_NAME}</b>"
                 ),
                 reply_markup=InlineKeyboardMarkup([
-                    [InlineKeyboardButton("👀 ᴠɪᴇᴡ ᴜsᴇʀ 👀", url=deep_link, style=ButtonStyle.DANGER)]
+                    [InlineKeyboardButton("👀 Üʏᴇʏİ ɢÖʀ 👀", url=deep_link, style=ButtonStyle.DANGER)]
                 ])
             )
             asyncio.create_task(_auto_delete(msg, 30))
