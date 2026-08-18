@@ -22,6 +22,7 @@ ytdl = yt_dlp.YoutubeDL(
         "format_sort": ["abr", "asr"],
         "geo_bypass": True,
         "nocheckcertificate": True,
+        "cookiefile": "cookies.txt",
     }
  )
 
@@ -32,6 +33,7 @@ def download(url: str, my_hook) -> str:
         "outtmpl": "downloads/%(id)s.%(ext)s",
         "geo_bypass": True,
         "nocheckcertificate": True,
+        "cookiefile": "cookies.txt",
         'quiet': True,
         'no_warnings': True,
     }

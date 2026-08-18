@@ -153,11 +153,12 @@ async def download_song(link: str) -> str:
         tmp_ytdl = mp3_path + ".ytdl"
         try:
             proc = await asyncio.create_subprocess_exec(
-                "yt-dlp",
+                sys.executable, "-m", "yt_dlp",
                 "-x", "--audio-format", "mp3",
                 "--audio-quality", "0",
                 "--no-playlist",
                 "--extractor-args", "youtube:player_client=android,ios",
+                "--cookies", "cookies.txt",
                 "-o", tmp_ytdl,
                 yt_url,
                 stdout=asyncio.subprocess.DEVNULL,
@@ -211,11 +212,12 @@ async def download_video(link: str) -> str:
     tmp_ytdl = file_path + ".ytdl"
     try:
         proc = await asyncio.create_subprocess_exec(
-            "yt-dlp",
+            sys.executable, "-m", "yt_dlp",
             "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
             "--merge-output-format", "mp4",
             "--no-playlist",
             "--extractor-args", "youtube:player_client=android,ios",
+            "--cookies", "cookies.txt",
             "-o", tmp_ytdl,
             yt_url,
             stdout=asyncio.subprocess.DEVNULL,
