@@ -152,16 +152,21 @@ async def download_song(link: str) -> str:
         downloaded = False
         yt_url = f"https://www.youtube.com/watch?v={video_id}" if "youtube" not in link else link
         tmp_ytdl = mp3_path + ".ytdl"
+        ytdlp_args = [
+            sys.executable, "-m", "yt_dlp",
+            "-x", "--audio-format", "mp3",
+            "--audio-quality", "0",
+            "--no-playlist",
+            "--extractor-args", "youtube:player_client=tv,mweb",
+            "-o", tmp_ytdl,
+            yt_url
+        ]
+        if os.path.exists(os.path.join(os.getcwd(), "cookies.txt")):
+            ytdlp_args.extend(["--cookies", os.path.join(os.getcwd(), "cookies.txt")])
+            
         try:
             proc = await asyncio.create_subprocess_exec(
-                sys.executable, "-m", "yt_dlp",
-                "-x", "--audio-format", "mp3",
-                "--audio-quality", "0",
-                "--no-playlist",
-                "--cookies", os.path.join(os.getcwd(), "cookies.txt"),
-                "--extractor-args", "youtube:player_client=android_embedded,web_creator,ios,android",
-                "-o", tmp_ytdl,
-                yt_url,
+                *ytdlp_args,
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.PIPE,
             )
@@ -214,16 +219,21 @@ async def download_video(link: str) -> str:
 
     # ── 1. Download via yt-dlp ──
     tmp_ytdl = file_path + ".ytdl"
+    ytdlp_args = [
+        sys.executable, "-m", "yt_dlp",
+        "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
+        "--merge-output-format", "mp4",
+        "--no-playlist",
+        "--extractor-args", "youtube:player_client=tv,mweb",
+        "-o", tmp_ytdl,
+        yt_url
+    ]
+    if os.path.exists(os.path.join(os.getcwd(), "cookies.txt")):
+        ytdlp_args.extend(["--cookies", os.path.join(os.getcwd(), "cookies.txt")])
+        
     try:
         proc = await asyncio.create_subprocess_exec(
-            sys.executable, "-m", "yt_dlp",
-            "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
-            "--merge-output-format", "mp4",
-            "--no-playlist",
-            "--cookies", os.path.join(os.getcwd(), "cookies.txt"),
-            "--extractor-args", "youtube:player_client=android_embedded,web_creator,ios,android",
-            "-o", tmp_ytdl,
-            yt_url,
+            *ytdlp_args,
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
         )
