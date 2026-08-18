@@ -57,29 +57,29 @@ def stream_markup_timer(_, chat_id, played, dur, videoid=None, autoplay=False):
     
     umm = math.floor(percentage)
     if 0 <= umm < 8:
-        bar = "𝐑❤️‍🔥···········"
+        bar = "𝐀❤️‍🔥···········"
     elif 8 <= umm < 17:
-        bar = "𝐑𝐎❤️‍🔥··········"
+        bar = "𝐀𝐘❤️‍🔥··········"
     elif 17 <= umm < 25:
-        bar = "𝐑𝐎𝐒❤️‍🔥·········"
+        bar = "𝐀𝐘𝐁❤️‍🔥·········"
     elif 25 <= umm < 33:
-        bar = "𝐑𝐎𝐒𝐄❤️‍🔥········"
+        bar = "𝐀𝐘𝐁𝐀❤️‍🔥········"
     elif 33 <= umm < 42:
-        bar = "𝐑𝐎𝐒𝐄𝐗❤️‍🔥·······"
+        bar = "𝐀𝐘𝐁𝐀𝐋❤️‍🔥·······"
     elif 42 <= umm < 50:
-        bar = "𝐑𝐎𝐒𝐄𝐗𝐌❤️‍🔥······"
+        bar = "𝐀𝐘𝐁𝐀𝐋𝐀❤️‍🔥······"
     elif 50 <= umm < 58:
-        bar = "𝐑𝐎𝐒𝐄𝐗𝐌𝐔❤️‍🔥·····"
+        bar = "𝐀𝐘𝐁𝐀𝐋𝐀𝐌❤️‍🔥·····"
     elif 58 <= umm < 67:
-        bar = "𝐑𝐎𝐒𝐄𝐗𝐌𝐔𝐒❤️‍🔥····"
+        bar = "𝐀𝐘𝐁𝐀𝐋𝐀𝐌✨❤️‍🔥····"
     elif 67 <= umm < 75:
-        bar = "𝐑𝐎𝐒𝐄𝐗𝐌𝐔𝐒𝐈❤️‍🔥···"
+        bar = "𝐀𝐘𝐁𝐀𝐋𝐀𝐌✨🎵❤️‍🔥···"
     elif 75 <= umm < 83:
-        bar = "𝐑𝐎𝐒𝐄𝐗𝐌𝐔𝐒𝐈𝐂❤️‍🔥··"
+        bar = "𝐀𝐘𝐁𝐀𝐋𝐀𝐌✨🎵❤️‍🔥··"
     elif 83 <= umm < 92:
-        bar = "𝐑𝐎𝐒𝐄𝐗𝐌𝐔𝐒𝐈𝐂🌹❤️‍🔥·"
+        bar = "𝐀𝐘𝐁𝐀𝐋𝐀𝐌✨🎵❤️‍🔥·"
     else:
-        bar = "𝐑𝐎𝐒𝐄𝐗𝐌𝐔𝐒𝐈𝐂🌹•❤️‍🔥"
+        bar = "𝐀𝐘𝐁𝐀𝐋𝐀𝐌✨🎵•❤️‍🔥"
     buttons = [
         [
             InlineKeyboardButton(
@@ -96,7 +96,7 @@ def stream_markup_timer(_, chat_id, played, dur, videoid=None, autoplay=False):
         ],
         [
             InlineKeyboardButton(
-                text="❤️‍🔥 ᴀᴜᴛᴏᴘʟᴀʏ",
+                text="❤️‍🔥 ᴏᴛᴏᴍᴀᴛɪᴋ çᴀʟ",
                 callback_data=f"ADMIN Autoplay|{chat_id}",
                 icon_custom_emoji_id=6271653280187684816,
                 style=ButtonStyle.PRIMARY,
@@ -106,7 +106,7 @@ def stream_markup_timer(_, chat_id, played, dur, videoid=None, autoplay=False):
     if videoid and videoid not in {"telegram", "soundcloud"}:
         buttons.append([
             InlineKeyboardButton(
-                text="⭐ Add to Playlist",
+                text="⭐ Çalma Listesine Ekle",
                 callback_data=f"add_to_playlist {videoid}",
                 style=ButtonStyle.SUCCESS,
             )
@@ -115,7 +115,7 @@ def stream_markup_timer(_, chat_id, played, dur, videoid=None, autoplay=False):
     if autoplay and videoid and videoid not in {"telegram", "soundcloud"}:
         buttons.append([
             InlineKeyboardButton(
-                text="⬇️ ᴛᴀᴘ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ sᴏɴɢ",
+                text="⬇️ şᴀʀᴋıʏı i̇ɴᴅi̇ʀ",
                 url=f"https://t.me/{app.username}?start=dl_{videoid}_a",
                 style=ButtonStyle.SUCCESS,
                 icon_custom_emoji_id=5309984423003823246,
@@ -124,19 +124,19 @@ def stream_markup_timer(_, chat_id, played, dur, videoid=None, autoplay=False):
     buttons += [
         [
             InlineKeyboardButton(
-                text="✨ ᴜᴘᴅᴀᴛᴇ",
+                text="✨ ɢüɴᴄᴇʟʟᴇᴍᴇ",
                 url=config.SUPPORT_CHANNEL,
                 icon_custom_emoji_id=5409025823388741707,
                 style=ButtonStyle.SUCCESS
             ),
             InlineKeyboardButton(
-                text="🌹 sᴜᴘᴘᴏꝛᴛ",
+                text="🌹 ᴅᴇsᴛᴇᴋ",
                 url=config.SUPPORT_CHAT,
                 icon_custom_emoji_id=5409194306365829029,
                 style=ButtonStyle.PRIMARY
             )
         ],
-        [InlineKeyboardButton(text="❤️‍🩹 ᴄʟᴏsᴇ ❤️‍🩹", callback_data="close", style=ButtonStyle.DANGER, icon_custom_emoji_id=5408832111773757273)],
+        [InlineKeyboardButton(text="❤️‍🩹 ᴋᴀᴘᴀᴛ ❤️‍🩹", callback_data="close", style=ButtonStyle.DANGER, icon_custom_emoji_id=5408832111773757273)],
     ]
     return buttons
 
@@ -147,7 +147,7 @@ def _dl_buttons(app_username, videoid):
         return []
     return [[
         InlineKeyboardButton(
-            text="🎵 ᴀᴜᴅɪᴏ",
+            text="🎵 sᴇs",
             url=f"https://t.me/{app_username}?start=dl_{videoid}_a",
             style=ButtonStyle.SUCCESS,
             icon_custom_emoji_id=5309984423003823246,
@@ -184,7 +184,7 @@ def stream_markup(_, chat_id, videoid=None, autoplay=False):
         ],
         [
             InlineKeyboardButton(
-                text="❤️‍🔥 ᴀᴜᴛᴏᴘʟᴀʏ",
+                text="❤️‍🔥 ᴏᴛᴏᴍᴀᴛɪᴋ çᴀʟ",
                 callback_data=f"ADMIN Autoplay|{chat_id}",
                 icon_custom_emoji_id=6271653280187684816,
                 style=ButtonStyle.PRIMARY,
@@ -195,7 +195,7 @@ def stream_markup(_, chat_id, videoid=None, autoplay=False):
     if videoid and videoid not in {"telegram", "soundcloud"}:
         buttons.append([
             InlineKeyboardButton(
-                text="⭐ Add to Playlist",
+                text="⭐ Çalma Listesine Ekle",
                 callback_data=f"add_to_playlist {videoid}",
                 style=ButtonStyle.SUCCESS,
             )
@@ -205,7 +205,7 @@ def stream_markup(_, chat_id, videoid=None, autoplay=False):
         # Single full-width "DM download" button for autoplay songs
         buttons.append([
             InlineKeyboardButton(
-                text="⬇️ ᴛᴀᴘ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ sᴏɴɢ",
+                text="⬇️ şᴀʀᴋıʏı i̇ɴᴅi̇ʀ",
                 url=f"https://t.me/{app.username}?start=dl_{videoid}_a",
                 style=ButtonStyle.SUCCESS,
                 icon_custom_emoji_id=5309984423003823246,
@@ -215,7 +215,7 @@ def stream_markup(_, chat_id, videoid=None, autoplay=False):
         # Regular play: keep audio + video split
         buttons.append([
             InlineKeyboardButton(
-                text="🎵 ᴀᴜᴅɪᴏ",
+                text="🎵 sᴇs",
                 url=f"https://t.me/{app.username}?start=dl_{videoid}_a",
                 style=ButtonStyle.SUCCESS,
                 icon_custom_emoji_id=5309984423003823246,
@@ -230,19 +230,19 @@ def stream_markup(_, chat_id, videoid=None, autoplay=False):
     buttons += [
         [
             InlineKeyboardButton(
-                text="✨ ᴜᴘᴅᴀᴛᴇ",
+                text="✨ ɢüɴᴄᴇʟʟᴇᴍᴇ",
                 url=config.SUPPORT_CHANNEL,
                 icon_custom_emoji_id=5409025823388741707,
                 style=ButtonStyle.SUCCESS
             ),
             InlineKeyboardButton(
-                text="🌹 sᴜᴘᴘᴏꝛᴛ",
+                text="🌹 ᴅᴇsᴛᴇᴋ",
                 url=config.SUPPORT_CHAT,
                 icon_custom_emoji_id=5409194306365829029,
                 style=ButtonStyle.PRIMARY
             )
         ],
-        [InlineKeyboardButton(text="❤️‍🩹 ᴄʟᴏsᴇ ❤️‍🩹", callback_data="close", style=ButtonStyle.DANGER, icon_custom_emoji_id=5408832111773757273)],
+        [InlineKeyboardButton(text="❤️‍🩹 ᴋᴀᴘᴀᴛ ❤️‍🩹", callback_data="close", style=ButtonStyle.DANGER, icon_custom_emoji_id=5408832111773757273)],
     ]
     return buttons
 
