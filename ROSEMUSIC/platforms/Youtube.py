@@ -158,7 +158,7 @@ async def download_song(link: str) -> str:
                 "-x", "--audio-format", "mp3",
                 "--audio-quality", "0",
                 "--no-playlist",
-                "--cookies", "cookies.txt",
+                "--cookies", os.path.join(os.getcwd(), "cookies.txt"),
                 "-o", tmp_ytdl,
                 yt_url,
                 stdout=asyncio.subprocess.PIPE,
@@ -219,7 +219,7 @@ async def download_video(link: str) -> str:
             "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
             "--merge-output-format", "mp4",
             "--no-playlist",
-            "--cookies", "cookies.txt",
+            "--cookies", os.path.join(os.getcwd(), "cookies.txt"),
             "-o", tmp_ytdl,
             yt_url,
             stdout=asyncio.subprocess.PIPE,
@@ -371,6 +371,7 @@ class YouTubeAPI:
                 "no_warnings": True,
                 "extract_flat": True,
                 "playlist_items": "2-15",   # broader pool to avoid repeats
+                "cookiefile": os.path.join(os.getcwd(), "cookies.txt"),
                 "extractor_args": {
                     "youtube": {
                         "player_client": ["android", "ios"],
@@ -442,6 +443,7 @@ class YouTubeAPI:
             link = link.split("&")[0]
         ytdl_opts = {
             "quiet": True,
+            "cookiefile": os.path.join(os.getcwd(), "cookies.txt"),
             "extractor_args": {
                 "youtube": {
                     "player_client": ["android_embedded", "web_creator"],
