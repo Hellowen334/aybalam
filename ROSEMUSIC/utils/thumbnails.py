@@ -75,10 +75,13 @@ async def get_thumb(videoid: str) -> str:
             "noplaylist": True,
             "extractor_args": {
                 "youtube": {
-                    "player_client": ["android", "ios"],
+                    "player_client": ["tv", "mweb", "android_embedded"],
                 }
             },
         }
+        if os.path.exists(os.path.join(os.getcwd(), "cookies.txt")):
+            opts["cookiefile"] = os.path.join(os.getcwd(), "cookies.txt")
+            
         with yt_dlp.YoutubeDL(opts) as ydl:
             return ydl.extract_info(
                 f"https://www.youtube.com/watch?v={videoid}", download=False
