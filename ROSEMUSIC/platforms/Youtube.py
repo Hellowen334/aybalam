@@ -383,13 +383,14 @@ class YouTubeAPI:
                 "no_warnings": True,
                 "extract_flat": True,
                 "playlist_items": "2-15",   # broader pool to avoid repeats
-                "cookiefile": os.path.join(os.getcwd(), "cookies.txt"),
                 "extractor_args": {
                     "youtube": {
-                        "player_client": ["android", "ios"],
+                        "player_client": ["tv", "mweb", "android", "ios"],
                     }
                 },
             }
+            if os.path.exists(os.path.join(os.getcwd(), "cookies.txt")):
+                ydl_opts["cookiefile"] = os.path.join(os.getcwd(), "cookies.txt")
             url = f"https://www.youtube.com/watch?v={vidid}&list=RD{vidid}"
             try:
                 with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -455,10 +456,9 @@ class YouTubeAPI:
             link = link.split("&")[0]
         ytdl_opts = {
             "quiet": True,
-            "cookiefile": os.path.join(os.getcwd(), "cookies.txt"),
             "extractor_args": {
                 "youtube": {
-                    "player_client": ["android_embedded", "web_creator"],
+                    "player_client": ["tv", "mweb", "android_embedded", "web_creator"],
                     "player_skip": ["webpage"],
                 }
             },
@@ -470,6 +470,8 @@ class YouTubeAPI:
                 ),
             },
         }
+        if os.path.exists(os.path.join(os.getcwd(), "cookies.txt")):
+            ytdl_opts["cookiefile"] = os.path.join(os.getcwd(), "cookies.txt")
         ydl = yt_dlp.YoutubeDL(ytdl_opts)
         with ydl:
             formats_available = []
