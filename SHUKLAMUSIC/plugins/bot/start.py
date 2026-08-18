@@ -437,12 +437,19 @@ async def start_pm(client, message: Message, _):
             await client.get_me()
         )
 
-        await message.reply_photo(
-            random.choice(ROSE_PICS),
-            has_spoiler=True,
-            caption=final_caption,
-            reply_markup=InlineKeyboardMarkup(out),
-        )
+        try:
+            await message.reply_photo(
+                random.choice(ROSE_PICS),
+                has_spoiler=True,
+                caption=final_caption,
+                reply_markup=InlineKeyboardMarkup(out),
+            )
+        except Exception:
+            await message.reply_text(
+                text=final_caption,
+                reply_markup=InlineKeyboardMarkup(out),
+                disable_web_page_preview=True,
+            )
         
         if await is_on_off(2):
             await app.send_message(
@@ -494,11 +501,18 @@ async def start_gp(client, message: Message, _):
         message.chat
     )
 
-    await message.reply_photo(
-        random.choice(ROSE_PICS),
-        caption=final_caption,
-        reply_markup=InlineKeyboardMarkup(out),
-    )
+    try:
+        await message.reply_photo(
+            random.choice(ROSE_PICS),
+            caption=final_caption,
+            reply_markup=InlineKeyboardMarkup(out),
+        )
+    except Exception:
+        await message.reply_text(
+            text=final_caption,
+            reply_markup=InlineKeyboardMarkup(out),
+            disable_web_page_preview=True,
+        )
     return await add_served_chat(message.chat.id)
 
 # ================================
@@ -626,12 +640,19 @@ async def welcome(client, message: Message):
                     message.chat
                 )
 
-                await message.reply_photo(
-                    random.choice(ROSE_PICS),
-                    has_spoiler=True,
-                    caption=final_caption,
-                    reply_markup=InlineKeyboardMarkup(out),
-                )
+                try:
+                    await message.reply_photo(
+                        random.choice(ROSE_PICS),
+                        has_spoiler=True,
+                        caption=final_caption,
+                        reply_markup=InlineKeyboardMarkup(out),
+                    )
+                except Exception:
+                    await message.reply_text(
+                        text=final_caption,
+                        reply_markup=InlineKeyboardMarkup(out),
+                        disable_web_page_preview=True,
+                    )
                 await add_served_chat(message.chat.id)
 
                 # Auto-detect and link channel if group has a linked channel
