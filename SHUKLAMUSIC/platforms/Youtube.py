@@ -158,7 +158,6 @@ async def download_song(link: str) -> str:
                 "-x", "--audio-format", "mp3",
                 "--audio-quality", "0",
                 "--no-playlist",
-                "--extractor-args", "youtube:player_client=android,ios",
                 "--cookies", "cookies.txt",
                 "-o", tmp_ytdl,
                 yt_url,
@@ -167,8 +166,8 @@ async def download_song(link: str) -> str:
             )
             stdout, stderr = await asyncio.wait_for(proc.communicate(), timeout=300)
             if proc.returncode != 0:
-                print("yt-dlp failed:")
-                print(stderr.decode())
+                from SHUKLAMUSIC.logging import LOGGER
+                LOGGER("yt-dlp").error(f"yt-dlp download failed for {yt_url}: {stderr.decode()}")
             # yt-dlp may append .mp3 extension
             import glob as _glob
             for candidate in [tmp_ytdl, tmp_ytdl + ".mp3"] + _glob.glob(tmp_ytdl + "*"):
@@ -220,14 +219,16 @@ async def download_video(link: str) -> str:
             "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best",
             "--merge-output-format", "mp4",
             "--no-playlist",
-            "--extractor-args", "youtube:player_client=android,ios",
             "--cookies", "cookies.txt",
             "-o", tmp_ytdl,
             yt_url,
-            stdout=asyncio.subprocess.DEVNULL,
-            stderr=asyncio.subprocess.DEVNULL,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
         )
-        await asyncio.wait_for(proc.wait(), timeout=600)
+        stdout, stderr = await asyncio.wait_for(proc.communicate(), timeout=600)
+        if proc.returncode != 0:
+            from SHUKLAMUSIC.logging import LOGGER
+            LOGGER("yt-dlp").error(f"yt-dlp download failed for {yt_url}: {stderr.decode()}")
         import glob as _glob
         for candidate in [tmp_ytdl, tmp_ytdl + ".mp4"] + _glob.glob(tmp_ytdl + "*"):
             if os.path.exists(candidate) and os.path.getsize(candidate) > 10_000:
