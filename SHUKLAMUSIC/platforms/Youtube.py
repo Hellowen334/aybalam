@@ -162,10 +162,13 @@ async def download_song(link: str) -> str:
                 "--cookies", "cookies.txt",
                 "-o", tmp_ytdl,
                 yt_url,
-                stdout=asyncio.subprocess.DEVNULL,
-                stderr=asyncio.subprocess.DEVNULL,
+                stdout=asyncio.subprocess.PIPE,
+                stderr=asyncio.subprocess.PIPE,
             )
-            await asyncio.wait_for(proc.wait(), timeout=300)
+            stdout, stderr = await asyncio.wait_for(proc.communicate(), timeout=300)
+            if proc.returncode != 0:
+                print("yt-dlp failed:")
+                print(stderr.decode())
             # yt-dlp may append .mp3 extension
             import glob as _glob
             for candidate in [tmp_ytdl, tmp_ytdl + ".mp3"] + _glob.glob(tmp_ytdl + "*"):

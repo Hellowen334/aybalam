@@ -373,6 +373,8 @@ class Call(PyTgCalls):
                             file_path, direct = await YouTube.download(
                                 new_vidid, None, videoid=True, video=autoplay_video
                             )
+                            if not file_path:
+                                raise Exception("Autoplay download failed")
                             db[chat_id] = []
                             ap_stream = self._build_stream(file_path, video=autoplay_video)
                             await self._play_on_assistant(client, chat_id, ap_stream)
@@ -470,6 +472,8 @@ class Call(PyTgCalls):
                     videoid=True,
                     video=video,
                 )
+                if not file_path:
+                    raise Exception("Download failed")
             except Exception:
                 return await mystic.edit_text(
                     _["call_6"], disable_web_page_preview=True
